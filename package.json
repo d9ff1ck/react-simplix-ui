@@ -1,0 +1,12 @@
+{
+    "name": "react-simplix",
+    "private": true,
+    "version": "0.0.0",
+    "packageManager": "pnpm@10.22.0",
+    "scripts": {
+        "dev": "pnpm --filter ./packages/ui dev",
+        "build": "pnpm -r build",
+        "test": "pnpm -r test",
+        "lint": "pnpm -r lint"
+    }
+}
