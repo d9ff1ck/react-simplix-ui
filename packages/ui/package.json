@@ -24,23 +24,11 @@
         "react": ">=18",
         "react-dom": ">=18"
     },
+
     "devDependencies": {
-        "@testing-library/jest-dom": "^6.9.1",
-        "@testing-library/react": "^16.3.0",
-        "@types/react": "^19.2.4",
-        "@types/react-dom": "^19.2.3",
-        "@typescript-eslint/eslint-plugin": "^8.46.4",
-        "@typescript-eslint/parser": "^8.46.4",
-        "@vitest/browser": "^4.0.8",
-        "eslint": "^9.39.1",
-        "eslint-config-prettier": "^10.1.8",
-        "jsdom": "^27.2.0",
-        "prettier": "^3.6.2",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
-        "tsup": "^8.5.1",
-        "typescript": "^5.9.3",
-        "vitest": "^4.0.8"
+        "tsup": "^8.5.1"
     },
     "scripts": {
         "dev": "tsup --watch",
@@ -50,10 +38,9 @@
     },
     "keywords": [
         "react",
+        "simplix",
         "ui",
         "components",
-        "design-system",
-        "headless",
         "modular",
         "typescript"
     ],
