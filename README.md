@@ -1,9 +1,9 @@
 <div align="center">
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="./apps/docs/assets/rslxui-icon-dark.svg">
-<source media="(prefers-color-scheme: light)" srcset="./apps/docs/assets/rslxui-icon-light.svg">
-<img alt="RSLXUI-Logo" src="./apps/docs/assets/rslxui-icon-dark.svg"/>
-</picture>
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="./apps/docs/assets/rslxui-icon-dark.svg">
+        <source media="(prefers-color-scheme: light)" srcset="./apps/docs/assets/rslxui-icon-light.svg">
+        <img alt="RSLXUI-Logo" src="./apps/docs/assets/rslxui-icon-dark.svg" height="72"/>
+    </picture>
 </div>
 
 <br />
