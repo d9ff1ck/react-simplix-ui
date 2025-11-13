@@ -7,7 +7,7 @@ Contributions are welcome once the core API becomes stable — feel free to subm
 ## Requirements
 To work on this project you will need:
 
-- **Node.js** : `24.x` (LTS) or higher
+- **Node.js** : `24.x (LTS)` or higher
 - **PNPM**: `9+` (recommended package manager)
 - **TypeScript**: `5+`
 - **Git**

@@ -1,12 +1,20 @@
-# react-simplix-ui
-A lightweight, modular UI constructor for React — designed to be **composed from clear**, **predictable building blocks** with **strict typing** and zero unnecessary magic.
+<div align="center">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="./apps/docs/assets/rslxui-icon-dark.svg">
+<source media="(prefers-color-scheme: light)" srcset="./apps/docs/assets/rslxui-icon-light.svg">
+<img alt="RSLXUI-Logo" src="./apps/docs/assets/rslxui-icon-dark.svg"/>
+</picture>
+</div>
+
+<br />
+
+A lightweight, modular UI constructor for React — designed to be **composed from clear**, **predictable building blocks** with **strict typing** and **zero unnecessary magic**.
 And yes, the trailing “x” is our small nod to a long-standing Linux tradition.
 
 
 ## Why react-simplix-ui?
 UI libraries are often heavy, opinionated, or overly abstract.  
 react-simplix-ui focuses on predictable composition, strict typing, and full developer control — without forcing styling systems or hidden behavior.
-
 
 ## Features
 - **Composable Architecture**  
