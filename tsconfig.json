@@ -1,7 +1,6 @@
 {
-    "files": [],
-    "references": [
-        { "path": "packages/ui" },
-        { "path": "apps/playground" }
-    ]
+    "compilerOptions": {
+        "composite": true,
+        "skipLibCheck": true
+    }
 }

@@ -1,4 +1,5 @@
 {
+    "extends": "../../tsconfig.json",
     "compilerOptions": {
         "target": "ES2020",
         "lib": ["DOM", "ES2020"],
@@ -26,10 +27,11 @@
         "skipLibCheck": false,
 
         "declaration": true,
-        "emitDeclarationOnly": false,
+        "declarationMap": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist",
+
         "isolatedModules": true
     },
-    "include": [
-        "src"
-    ]
+    "include": ["src"]
 }
