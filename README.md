@@ -1,9 +1,18 @@
 <div align="center">
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="./apps/docs/assets/rslxui-icon-dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="./apps/docs/assets/rslxui-icon-light.svg">
-        <img alt="RSLXUI-Logo" src="./apps/docs/assets/rslxui-icon-dark.svg" height="72"/>
-    </picture>
+	<picture>
+		<source
+			 media="(prefers-color-scheme: dark)" 
+			 srcset="./apps/docs/assets/rslxui-icon-dark.svg"
+			 >
+		<source 
+			media="(prefers-color-scheme: light)" 
+			srcset="./apps/docs/assets/rslxui-icon-light.svg"
+			>
+		<img 
+			alt="RSLXUI-Logo"
+			src="./apps/docs/assets/rslxui-icon-dark.svg" height="72"
+			/>
+	</picture>
 </div>
 
 <br />
@@ -35,7 +44,6 @@ react-simplix-ui focuses on predictable composition, strict typing, and full dev
 
 ### Requirements
 1. **React**:  `18` or higher
-2. **Node.js**: `v24.x (LTS)` or higher
 
 
 ### Installation

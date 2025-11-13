@@ -24,17 +24,19 @@
         "react": ">=18",
         "react-dom": ">=18"
     },
-
+    "dependencies": {
+        "clsx": "^2.1.1"
+    },
     "devDependencies": {
+        "@types/react": "^19.2.4",
+        "@types/react-dom": "^19.2.3",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
         "tsup": "^8.5.1"
     },
     "scripts": {
         "dev": "tsup --watch",
-        "build": "tsup",
-        "lint": "eslint . --ext .ts,.tsx",
-        "lint:fix": "eslint . --ext .ts,.tsx --fix"
+        "build": "tsup"
     },
     "keywords": [
         "react",
