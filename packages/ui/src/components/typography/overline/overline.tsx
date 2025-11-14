@@ -1,10 +1,13 @@
-import {JSX} from "react";
+import {ElementType, JSX} from "react";
 import {Text} from "../text";
+import "./styles.css";
+import {OverlineProps} from "./types";
 
-export function Overline(): JSX.Element {
+export function Overline<T extends ElementType = "span">(props: OverlineProps<T>): JSX.Element {
+    const {as, ...rest} = props;
+    const Tag: ElementType = as ?? "span";
+
     return (
-        <Text>
-
-        </Text>
-    )
+        <Text as={Tag} {...rest} />
+    );
 }

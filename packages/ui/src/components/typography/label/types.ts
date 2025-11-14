@@ -1,5 +1,4 @@
-import {ComponentWithChildren, ComponentWithStyles} from "../../../lib";
+import {ElementType} from "react";
+import {PolymorphicProps} from "../../../lib";
 
-export type LabelProps = {
-
-} & ComponentWithStyles & ComponentWithChildren
+export type LabelProps<T extends ElementType = "span"> = PolymorphicProps<T>

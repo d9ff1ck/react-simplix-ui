@@ -1,5 +1,4 @@
-import {ComponentWithChildren, ComponentWithStyles} from "../../../lib";
+import {ElementType} from "react";
+import {PolymorphicProps} from "../../../lib";
 
-export type OverlineProps = {
-
-} & ComponentWithStyles & ComponentWithChildren
+export type OverlineProps<T extends ElementType = "span"> = PolymorphicProps<T>

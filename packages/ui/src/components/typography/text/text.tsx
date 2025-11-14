@@ -8,7 +8,7 @@ export function Text<T extends ElementType = "p">(props: TextProps<T>): JSX.Elem
     const Component: ElementType = as ?? "p";
 
     return (
-        <Component {...rest} className={clsx("rslx-text", className)} style={style}>
+        <Component className={clsx("rslx-text", className)} style={style} {...rest}>
             {children}
         </Component>
     );

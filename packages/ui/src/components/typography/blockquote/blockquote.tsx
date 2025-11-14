@@ -1,10 +1,13 @@
-import {JSX} from "react";
+import {ElementType, JSX} from "react";
 import {Text} from "../text";
+import "./styles.css"
+import {BlockquoteProps} from "./types";
 
-export function Blockquote(): JSX.Element {
+export function Blockquote(props: BlockquoteProps): JSX.Element {
+    const {cite, ...rest} = props;
+    const Tag: ElementType = "blockquote";
+
     return (
-        <Text>
-
-        </Text>
+        <Text as={Tag} {...rest}/>
     )
 }
