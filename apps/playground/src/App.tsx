@@ -1,27 +1,19 @@
-import {JSX} from 'react'
-import {Heading} from "@simplix/ui";
+import {JSX, lazy, Suspense} from "react";
+import {useSearchParams} from "./useSearchParams";
 
 export function App(): JSX.Element {
+    const params = useSearchParams();
+    const demo = params.demo;
+
+    if (!demo) {
+        return <>No demo specified</>;
+    }
+
+    const Component = lazy(() => import(`./components/${demo}.tsx`));
+
     return (
-        <>
-            <Heading size={`h1`}>
-                H1
-            </Heading>
-            <Heading size={`h2`}>
-                H2
-            </Heading>
-            <Heading size={`h3`}>
-                H3
-            </Heading>
-            <Heading size={`h4`}>
-                H4
-            </Heading>
-            <Heading size={`h5`}>
-                H5
-            </Heading>
-            <Heading size={`h6`}>
-                H6
-            </Heading>
-        </>
-    )
+        <Suspense fallback="Loading…">
+            <Component />
+        </Suspense>
+    );
 }

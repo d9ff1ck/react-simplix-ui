@@ -1,6 +1,6 @@
 import {CSSProperties} from "react";
 
-export interface StyleProps {
+export type ComponentWithStyles = {
     className?: string;
     style?: CSSProperties;
 }

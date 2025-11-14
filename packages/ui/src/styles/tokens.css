@@ -1,4 +1,27 @@
 :root {
     --rslx-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+    --rslx-font-size-xs: 0.75rem;
+    --rslx-font-size-sm: 0.875rem;
+    --rslx-font-size-md: 1rem;
+    --rslx-font-size-lg: 1.25rem;
+    --rslx-font-size-xl: 1.563rem;
+    --rslx-font-size-6: 1.953rem;
+    --rslx-font-size-7: 2.441rem;
+
+    --rslx-line-tight: 1.1;
+    --rslx-line-normal: 1.4;
+    --rslx-line-relaxed: 1.6;
+
+    --rslx-font-weight-regular: 400;
+    --rslx-font-weight-medium: 500;
+    --rslx-font-weight-semibold: 600;
+    --rslx-font-weight-bold: 700;
+
+    --rslx-letter-tight: -0.015em;
+    --rslx-letter-normal: 0;
+    --rslx-letter-relaxed: 0.025em;
 }
+
+

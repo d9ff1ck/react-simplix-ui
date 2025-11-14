@@ -1,7 +1,4 @@
-import {type ComponentPropsWithoutRef, type JSX} from "react";
-import {StyleProps} from "../../types";
+import {ElementType} from "react";
+import {PolymorphicProps} from "../../../lib";
 
-export type TextProps = StyleProps & ComponentPropsWithoutRef<keyof JSX.IntrinsicElements> & {
-    as?: keyof JSX.IntrinsicElements;
-    role?: string;
-};
+export type TextProps<T extends ElementType = "p"> = PolymorphicProps<T>
