@@ -15,10 +15,15 @@
 			/>
 	</picture>
 </div>
+
 <br />
 
-A lightweight, modular UI constructor for React — designed to be **composed from clear**, **predictable building blocks** with **strict typing** and **zero unnecessary magic**.
-And yes, the trailing “x” is our small nod to a long-standing Linux tradition.
+<div align="center">
+	A lightweight, modular UI constructor for React — designed to be <strong>composed from clear</strong>, <strong>predictable building blocks</strong> with <strong>strict typing</strong> and <strong>zero unnecessary magic</strong>.
+	And yes, the trailing “x” is our small nod to a long-standing Linux tradition.
+</div>
+
+---
 
 ## Why react-simplix-ui?
 UI libraries are often heavy, opinionated, or overly abstract.  
@@ -30,7 +35,11 @@ react-simplix-ui focuses on predictable composition, strict typing, and full dev
 - **Strict Type Safety**  
   Fully typed from top to bottom. No hidden `any`, no unclear behavior — your editor always knows what’s going on.
 - **Built-In Accessibility (a11y)**  
-  Components follow accessible interaction patterns by default — proper focus handling, keyboard.
+  Components follow accessible interaction patterns by default:
+    - Keyboard navigation
+    - Focus management
+    - ARIA roles and state syncing
+    - Predictable state machines
 - **Unopinionated Styling**  
   Use any styling approach you prefer: CSS, SCSS, Tailwind, SASS, CSS-in-JS, or anything else. No imposed design system.
 - **Minimal & Dependency-Free**  
@@ -42,7 +51,7 @@ react-simplix-ui focuses on predictable composition, strict typing, and full dev
 ## Quick Start
 
 ### Requirements
-1. **React**:  `18` or higher
+- **React**:  `18` or higher
 
 
 ### Installation
@@ -63,21 +72,32 @@ yarn add react-simplix-ui
 ```
 
 
-### Usage Example
-```tsx
-import { Dropdown, DropdownTrigger, DropdownMenu } from "react-simplix-ui/dropdown";
+### Usage
 
-export function CoolDropdown() {
-  return (
-    <Dropdown>
-      <DropdownTrigger>Open</DropdownTrigger>
-      <DropdownMenu>
-        <button>Profile</button>
-        <button>Settings</button>
-        <button>Logout</button>
-      </DropdownMenu>
-    </Dropdown>
-  );
+```tsx
+import {Dropdown} from "@simplix/ui";
+
+export function App(): JSX.Element {
+	return (  
+		<>  
+			<Dropdown open={state} onChangeState={setState}>  
+				<Dropdown.Trigger> 
+				Toggle Menu  
+				</Dropdown.Trigger>  
+				<Dropdown.Menu>                    
+					<Dropdown.Item>
+						Profile  
+					</Dropdown.Item>  
+					<Dropdown.Item>
+						Settings  
+					</Dropdown.Item>  
+					<Dropdown.Item>
+						Logout  
+					</Dropdown.Item>  
+				</Dropdown.Menu>            
+			</Dropdown>        
+		</> 
+	);  
 }
 ```
 
