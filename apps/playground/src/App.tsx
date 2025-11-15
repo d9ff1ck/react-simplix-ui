@@ -9,7 +9,7 @@ export function App(): JSX.Element {
         return <>No demo specified</>;
     }
 
-    const Component = lazy(() => import(`./components/${demo}.tsx`));
+    const Component = lazy(() => import(`./components/${demo}.demo.tsx`));
 
     return (
         <Suspense fallback="Loading…">

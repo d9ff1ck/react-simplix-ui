@@ -1,7 +1,7 @@
 import {ElementType, JSX} from "react";
 import {Text} from "../text";
-import "./styles.css"
-import {LabelProps} from "./types";
+import "./label.styles.css"
+import {LabelProps} from "./label.types";
 
 export function Label(props: LabelProps): JSX.Element {
     const {as, ...rest} = props;

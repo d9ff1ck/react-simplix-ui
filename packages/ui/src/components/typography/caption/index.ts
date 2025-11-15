@@ -1,2 +1,2 @@
-export {type CaptionProps} from './types';
+export {type CaptionProps} from './caption.types';
 export {Caption} from './caption';

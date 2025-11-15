@@ -31,7 +31,7 @@ git clone https://github.com/d9ff1ck/react-simplix-ui.git
 cd react-simplix-ui
 ```
 
-### Start the Playdround
+### Start the Playground
 ```bash
 cd apps/playground
 pnpm dev
@@ -120,7 +120,7 @@ If your PR touches:
 ### Document Your Changes
 PRs must include:
 - updated examples, if relevant
-- updated docs (once docs are live)
+- updated docs
 - clear explanation of the change
 
 ### Keep PRs Small

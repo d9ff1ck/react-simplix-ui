@@ -1,7 +1,7 @@
 import {ElementType, JSX} from "react";
 import {Text} from "../text";
-import {HeadingProps} from "./types";
-import "./styles.css";
+import {HeadingProps} from "./heading.types";
+import "./heading.styles.css";
 
 export function Heading(props: HeadingProps): JSX.Element {
     const {variant, ...rest} = props;

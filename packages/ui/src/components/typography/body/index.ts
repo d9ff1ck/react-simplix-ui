@@ -1,2 +1,2 @@
-export {type BodyProps, type BodySize} from  "./types"
+export {type BodyProps, type BodySize} from "./body.types"
 export {Body} from "./body"

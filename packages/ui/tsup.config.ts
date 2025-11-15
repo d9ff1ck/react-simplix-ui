@@ -1,4 +1,4 @@
-import {defineConfig} from 'tsup'
+import {defineConfig} from "tsup";
 
 export default defineConfig({
     entry: ["src/index.ts"],
@@ -8,7 +8,7 @@ export default defineConfig({
 
     sourcemap: true,
     clean: true,
-    bundle: true,
+    bundle: false,
 
     dts: true,
 
@@ -21,5 +21,5 @@ export default defineConfig({
         options.loader = {
             ".css": "css"
         };
-    },
+    }
 });

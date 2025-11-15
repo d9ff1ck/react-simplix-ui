@@ -1,7 +1,7 @@
 import {ElementType, JSX} from "react";
 import {Text} from "../text";
-import {CodeProps} from "./types";
-import "./styles.css"
+import {CodeProps} from "./code.types";
+import "./code.styles.css"
 
 
 export function Code(props: CodeProps): JSX.Element {

@@ -1,0 +1,30 @@
+:root {
+    --font-blockqute:          var(--rslx-font-sans);
+    --font-body:               var(--rslx-font-sans);
+    --font-caption:            var(--rslx-font-sans);
+    --font-code:               var(--rslx-font-mono);
+    --font-heading:            var(--rslx-font-sans);
+    --font-label:              var(--rslx-font-sans);
+    --font-overline:           var(--rslx-font-sans);
+    --font-text:               var(--rslx-font-sans);
+
+    --blockquote-line-height:  var(--rslx-line-height-2);
+
+    --body-sm-line-height:     var(--rslx-line-height-7);
+    --body-md-line-height:     var(--rslx-line-height-6);
+    --body-lg-line-height:     var(--rslx-line-height-5);
+
+    --caption-line-height:     var(--rslx-line-height-7);
+    --code-line-height:        var(--rslx-line-height-2);
+
+    --heading-xs-line-height:  var(--rslx-line-height-6);
+    --heading-sm-line-height:  var(--rslx-line-height-5);
+    --heading-md-line-height:  var(--rslx-line-height-4);
+    --heading-lg-line-height:  var(--rslx-line-height-3);
+    --heading-xl-line-height:  var(--rslx-line-height-2);
+    --heading-2xl-line-height: var(--rslx-line-height-1);
+
+    --label-line-height:       var(--rslx-line-height-6);
+    --overline-line-height:    var(--rslx-line-height-7);
+    --text-line-height:        var(--rslx-line-height-2);
+}

@@ -1,11 +1,13 @@
-import {JSX} from "react";
+import {ElementType, JSX} from "react";
+import {CaptionProps} from "./caption.types";
 import {Text} from "../text";
-import "./styles.css"
+import "./caption.styles.css"
 
-export function Caption(): JSX.Element {
+export function Caption<T extends ElementType = "span">(props: CaptionProps<T>): JSX.Element {
+    const {as, ...rest} = props;
+    const Tag: ElementType = as ?? "span";
+
     return (
-        <Text>
-
-        </Text>
+        <Text as={Tag} {...rest}/>
     )
 }

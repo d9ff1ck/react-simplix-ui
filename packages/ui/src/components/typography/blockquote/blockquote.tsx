@@ -1,7 +1,7 @@
 import {ElementType, JSX} from "react";
+import {BlockquoteProps} from "./blockquote.types";
 import {Text} from "../text";
-import "./styles.css"
-import {BlockquoteProps} from "./types";
+import "./blockquote.styles.css"
 
 export function Blockquote(props: BlockquoteProps): JSX.Element {
     const {cite, ...rest} = props;
