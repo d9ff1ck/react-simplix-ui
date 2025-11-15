@@ -5,30 +5,36 @@ import {DropdownTriggerProps} from "./dropdown.types";
 import "./styles/dropdown.trigger.css";
 
 export function DropdownTrigger(props: DropdownTriggerProps): JSX.Element {
-    const {children, className, style, onClick, disabled: disabledProperty, ...rest} = props;
-    const {open, setOpen, disabled: disabledContext} = useDropdownContext("Trigger");
-    const disabled = disabledContext || disabledProperty;
+    const {children, className, style, onClick, disabled: propertyDisabled, ...rest} = props;
+    const {open, onChangeState, disabled: contextDisabled} = useDropdownContext("Trigger");
+    const disabled = contextDisabled || propertyDisabled;
 
-    const handleClick: MouseEventHandler<HTMLButtonElement> = (event) => {
+    const handle: MouseEventHandler<HTMLButtonElement> = (event) => {
         onClick?.(event);
         if (event.defaultPrevented) {
             return;
         }
         if (!disabled) {
-            setOpen(!open);
+            onChangeState(!open);
         }
     };
 
     return (
         <button
-            {...rest}
+            id={`dropdown-trigger`}
+            aria-controls={`dropdown-menu`}
             aria-expanded={open}
             aria-haspopup={"menu"}
-            onClick={handleClick}
+
+            onClick={handle}
             disabled={disabled}
+
             className={clsx("dropdown-trigger", className)}
             style={style}
-            children={children}
-        />
+
+            {...rest}
+        >
+            {children}
+        </button>
     );
 }

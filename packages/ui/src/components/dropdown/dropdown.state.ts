@@ -2,9 +2,13 @@ import {useCallback} from "react";
 import {DropdownState, UseDropdownStateResult} from "./dropdown.types";
 
 export function useDropdownState(props: DropdownState): UseDropdownStateResult {
-    const { isOpen = false, onChangeState, disabled = false} = props;
+    const {
+        open: PropertyOpen = true,
+        onChangeState,
+        disabled = false
+    } = props;
 
-    const open = disabled ? false : isOpen;
+    const open = disabled ? false : PropertyOpen;
 
     const setOpen = useCallback((next: boolean) => {
         if (disabled) {
@@ -12,7 +16,7 @@ export function useDropdownState(props: DropdownState): UseDropdownStateResult {
         }
 
         onChangeState?.(next);
-    }, [disabled, onChangeState])
+    }, [disabled, onChangeState]);
 
-    return { open, setOpen };
+    return {open, setOpen};
 }

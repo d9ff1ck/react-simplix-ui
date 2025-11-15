@@ -2,7 +2,7 @@ import {ComponentPropsWithoutRef, ElementType} from "react";
 import {ComponentWithChildren} from "./children";
 import {ComponentWithStyles} from "./styles";
 
-export type PolymorphicProps<T extends ElementType, P = {}> = { as?: T; }
+export type PolymorphicPropsWithoutRef<T extends ElementType, P = {}> = { as?: T; }
     & P
     & ComponentWithStyles
     & ComponentWithChildren

@@ -7,23 +7,23 @@ import "./styles/dropdown.root.css";
 
 export function DropdownRoot(props: DropdownRootProps): JSX.Element {
     const {
-        isOpen = false,
-        onChangeState,
-        disabled = false,
         children,
         className,
-        style
+        style,
+        open = false,
+        onChangeState,
+        disabled = false
     } = props;
 
     const state = useDropdownState({
-        isOpen,
+        open,
         ...(onChangeState !== undefined && {onChangeState}),
         disabled
     });
 
     const value: DropdownContextValue = {
         open: state.open,
-        setOpen: state.setOpen,
+        onChangeState: state.setOpen,
         disabled: disabled
     };
 
@@ -33,8 +33,9 @@ export function DropdownRoot(props: DropdownRootProps): JSX.Element {
                 aria-disabled={value.disabled}
                 className={clsx("dropdown", className)}
                 style={style}
-                children={children}
-            />
+            >
+                {children}
+            </div>
         </DropdownContext.Provider>
     );
 }

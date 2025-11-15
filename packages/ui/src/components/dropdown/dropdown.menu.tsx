@@ -6,7 +6,7 @@ import "./styles/dropdown.menu.css";
 
 export function DropdownMenu(props: DropdownMenuProps): JSX.Element | null {
     const {children, className, style, ...rest} = props;
-    const {open, disabled} = useDropdownContext("Menu");
+    const {open} = useDropdownContext("Menu");
 
     if (!open) {
         return null;
@@ -14,11 +14,17 @@ export function DropdownMenu(props: DropdownMenuProps): JSX.Element | null {
 
     return (
         <div
-            {...rest}
             role={"menu"}
-            aria-disabled={disabled}
+            id="dropdown-menu"
+            aria-labelledby={`dropdown-trigger`}
+            tabIndex={-1}
+
             className={clsx("dropdown-menu", className)}
-            children={children}
-        />
+            style={style}
+
+            {...rest}
+        >
+            {children}
+        </div>
     );
 }
