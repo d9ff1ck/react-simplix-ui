@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [react()],
     resolve: {
         alias: {
-            "@simplix/ui": path.resolve(__dirname, "../../packages/ui/src"),
+            "@simplix/ui": path.resolve(__dirname, "../../packages/ui/src/index.ts"),
         },
     },
 });

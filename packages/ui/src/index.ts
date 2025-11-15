@@ -6,4 +6,5 @@ import "./styles/themes/light.css";
 import "./styles/themes/dark.css";
 
 export * from "./lib/types";
+export * from "./components/dropdown";
 export * from "./components/typography";

@@ -1,19 +1,29 @@
-import {JSX, lazy, Suspense} from "react";
-import {useSearchParams} from "./useSearchParams";
+import {Dropdown} from "@simplix/ui";
+import {JSX, useState} from "react";
+import "./App.css";
 
 export function App(): JSX.Element {
-    const params = useSearchParams();
-    const demo = params.demo;
-
-    if (!demo) {
-        return <>No demo specified</>;
-    }
-
-    const Component = lazy(() => import(`./components/${demo}.demo.tsx`));
+    const [state, setState] = useState<boolean>(false);
 
     return (
-        <Suspense fallback="Loading…">
-            <Component />
-        </Suspense>
+        <>
+            <Dropdown isOpen={state} onChangeState={setState}>
+                <Dropdown.Trigger>
+                    Click me
+                </Dropdown.Trigger>
+                <Dropdown.Menu>
+                    <Dropdown.Item>
+                        Element 1
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        Element 2
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        Element 3
+                    </Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+        </>
+
     );
 }
