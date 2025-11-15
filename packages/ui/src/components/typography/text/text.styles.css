@@ -1,3 +1,6 @@
-.rslx-text {
-
+.text {
+    font-family: var(--font-text), sans-serif;
+    font-weight: var(--text-weight);
+    font-size: var(--text-size);
+    line-height: var(--text-line-height);
 }

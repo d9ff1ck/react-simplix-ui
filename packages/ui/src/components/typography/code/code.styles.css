@@ -1,0 +1,6 @@
+.code {
+    font-family: var(--font-code), monospace;
+    font-weight: var(--code-weight);
+    font-size:   var(--code-size);
+    line-height: var(--code-line-height);
+}

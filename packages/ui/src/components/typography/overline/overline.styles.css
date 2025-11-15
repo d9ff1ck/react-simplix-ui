@@ -1,0 +1,6 @@
+.overline {
+    font-family: var(--font-overline), sans-serif;
+    font-weight: var(--overline-weight);
+    font-size:   var(--overline-size);
+    line-height: var(--overline-line-height);
+}

@@ -1,0 +1,6 @@
+.blockquote {
+    font-family: var(--font-blockqute), sans-serif;
+    font-weight: var(--blockquote-weight);
+    font-size:   var(--blockquote-size);
+    line-height: var(--blockquote-line-height);
+}

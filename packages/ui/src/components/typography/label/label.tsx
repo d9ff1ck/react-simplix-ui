@@ -1,13 +1,14 @@
+import clsx from "clsx";
 import {ElementType, JSX} from "react";
 import {Text} from "../text";
-import "./label.styles.css"
+import "./label.styles.css";
 import {LabelProps} from "./label.types";
 
 export function Label(props: LabelProps): JSX.Element {
-    const {as, ...rest} = props;
+    const {as, className, ...rest} = props;
     const Tag: ElementType = as ?? "span";
 
     return (
-        <Text as={Tag} {...rest}/>
-    )
+        <Text as={Tag} className={clsx("label", className)} {...rest} />
+    );
 }

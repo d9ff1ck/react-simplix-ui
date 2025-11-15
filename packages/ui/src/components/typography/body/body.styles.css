@@ -1,0 +1,21 @@
+.body {
+    font-family: var(--font-blockqute), sans-serif;
+}
+
+.body-small {
+    font-weight: var(--body-sm-weight);
+    font-size:   var(--body-sm-size);
+    line-height: var(--body-sm-line-height);
+}
+
+.body-medium {
+    font-weight: var(--body-md-weight);
+    font-size:   var(--body-md-size);
+    line-height: var(--body-md-line-height);
+}
+
+.body-large {
+    font-weight: var(--body-lg-weight);
+    font-size:   var(--body-lg-size);
+    line-height: var(--body-lg-line-height);
+}
