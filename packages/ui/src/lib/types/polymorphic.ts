@@ -6,4 +6,4 @@ export type PolymorphicPropsWithoutRef<T extends ElementType, P = {}> = { as?: T
     & P
     & ComponentWithStyles
     & ComponentWithChildren
-    & Omit<ComponentPropsWithoutRef<T>, keyof P | keyof ComponentWithStyles | "children" | "as">;
+    & Omit<ComponentPropsWithoutRef<T>, keyof P | keyof ComponentWithStyles | keyof ComponentWithChildren | "as">;

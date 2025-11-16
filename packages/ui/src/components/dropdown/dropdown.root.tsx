@@ -30,7 +30,6 @@ export function DropdownRoot(props: DropdownRootProps): JSX.Element {
     return (
         <DropdownContext.Provider value={value}>
             <div
-                aria-disabled={value.disabled}
                 className={clsx("dropdown", className)}
                 style={style}
             >
