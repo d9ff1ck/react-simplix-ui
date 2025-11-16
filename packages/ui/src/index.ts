@@ -9,3 +9,4 @@ export * from "./lib/types";
 export * from "./components/dropdown";
 export * from "./components/typography";
 export * from "./core/portal";
+export * from "./core/theme";
