@@ -7,5 +7,5 @@ import "./styles/themes/dark.css";
 
 export * from "./lib/types";
 export * from "./components/dropdown";
-export * from "./components/portal";
 export * from "./components/typography";
+export * from "./core/portal";

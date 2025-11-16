@@ -30,7 +30,7 @@ export function App(): JSX.Element {
                 >
                     Toggle Menu
                 </Dropdown.Trigger>
-                <Portal>
+                <Portal container={document.getElementById("root")}>
                     <Dropdown.Menu style={{
                         marginTop: "0.25rem",
                         borderRadius: "1rem",
