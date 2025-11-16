@@ -7,7 +7,7 @@ export function useDropdownContext(component: string): DropdownContextValue {
     const context = useContext<DropdownContextValue | null>(DropdownContext);
 
     if (!context) {
-        throw new Error(`<Dropdown.${component}> must be inside <Dropdown>`)
+        throw new Error(`<Dropdown.${component}> must be inside <Dropdown>`);
     }
     return context;
 }

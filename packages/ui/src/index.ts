@@ -5,8 +5,8 @@ import "./styles/globals.css";
 import "./styles/themes/light.css";
 import "./styles/themes/dark.css";
 
-export * from "./lib/types";
 export * from "./components/dropdown";
 export * from "./components/typography";
 export * from "./core/portal";
 export * from "./core/theme";
+export * from "./lib/types";
