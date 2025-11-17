@@ -8,9 +8,9 @@ export type DropdownContextValue = {
 }
 
 export type DropdownState = {
-    open?: boolean;
-    onChangeState?(open: boolean): void;
-    disabled?: boolean;
+    open?: boolean | undefined;
+    onChangeState?(open: boolean): void | undefined;
+    disabled?: boolean | undefined;
 }
 
 export type UseDropdownStateResult = {
@@ -28,7 +28,10 @@ export type DropdownMenuProps = ComponentWithChildren
     & ComponentWithStyles
     & Omit<HTMLAttributes<HTMLDivElement>, keyof ComponentWithChildren | keyof ComponentWithStyles>
 
-export type DropdownItemProps = { onSelect?(): void; disabled?: boolean; }
+export type DropdownItemProps = {
+    onSelect?(): void | undefined;
+    disabled?: boolean | undefined;
+}
     & ComponentWithChildren
     & ComponentWithStyles
     & Omit<HTMLAttributes<HTMLDivElement>, keyof ComponentWithChildren | keyof ComponentWithStyles>

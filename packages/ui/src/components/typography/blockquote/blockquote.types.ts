@@ -1,5 +1,5 @@
 import {ComponentWithChildren, ComponentWithStyles} from "../../../lib/types";
 
 export type BlockquoteProps = {
-    cite?: string;
+    cite?: string | undefined;
 } & ComponentWithStyles & ComponentWithChildren

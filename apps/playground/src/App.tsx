@@ -1,4 +1,4 @@
-import {Dropdown, Portal} from "@simplix/ui";
+import {Dropdown} from "@simplix/ui";
 import {JSX, useState} from "react";
 import "./App.css";
 
@@ -30,7 +30,6 @@ export function App(): JSX.Element {
                 >
                     Toggle Menu
                 </Dropdown.Trigger>
-                <Portal container={document.getElementById("root")}>
                     <Dropdown.Menu style={{
                         marginTop: "0.25rem",
                         borderRadius: "1rem",
@@ -50,9 +49,7 @@ export function App(): JSX.Element {
                             Second
                         </Dropdown.Item>
                     </Dropdown.Menu>
-                </Portal>
             </Dropdown>
         </div>
-
     );
 }

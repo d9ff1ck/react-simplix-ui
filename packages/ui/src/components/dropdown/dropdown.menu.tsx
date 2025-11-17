@@ -1,12 +1,16 @@
 import clsx from "clsx";
-import {JSX} from "react";
+import {JSX, useRef} from "react";
+import {useClickOutside} from "../../core/hooks";
 import {useDropdownContext} from "./dropdown.context";
 import {DropdownMenuProps} from "./dropdown.types";
 import "./styles/dropdown.menu.css";
 
 export function DropdownMenu(props: DropdownMenuProps): JSX.Element | null {
     const {children, className, style, ...rest} = props;
-    const {open} = useDropdownContext("Menu");
+    const {open, onChangeState} = useDropdownContext("Menu");
+    const menuRef = useRef<HTMLDivElement | null>(null);
+
+    useClickOutside(menuRef, () => onChangeState?.(false))
 
     if (!open) {
         return null;
@@ -14,6 +18,7 @@ export function DropdownMenu(props: DropdownMenuProps): JSX.Element | null {
 
     return (
         <div
+            ref={menuRef}
             role={"menu"}
             id="dropdown-menu"
             aria-labelledby={`dropdown-trigger`}

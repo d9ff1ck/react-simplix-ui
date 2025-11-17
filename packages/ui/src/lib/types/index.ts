@@ -1,14 +1,17 @@
 import {ComponentPropsWithoutRef, CSSProperties, ElementType, ReactNode} from "react";
 
 export type ComponentWithStyles = {
-    className?: string;
-    style?: CSSProperties;
+    className?: string | undefined;
+    style?: CSSProperties | undefined;
 }
 export type ComponentWithChildren = {
-    children?: ReactNode;
+    children?: ReactNode | undefined;
 }
 
-export type PolymorphicPropsWithoutRef<T extends ElementType, P = {}> = { as?: T; }
+export type PolymorphicPropsWithoutRef<T extends ElementType, P = {}> =
+    {
+        as?: T | undefined;
+    }
     & P
     & ComponentWithStyles
     & ComponentWithChildren
