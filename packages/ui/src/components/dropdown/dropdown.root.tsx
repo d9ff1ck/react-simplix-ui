@@ -1,5 +1,6 @@
 import clsx from "clsx";
-import {JSX} from "react";
+import {JSX, useRef} from "react";
+import {useClickOutside} from "../../core/hooks";
 import {DropdownContext} from "./dropdown.context";
 import {useDropdownState} from "./dropdown.state";
 import {DropdownContextValue, DropdownRootProps} from "./dropdown.types";
@@ -15,21 +16,16 @@ export function DropdownRoot(props: DropdownRootProps): JSX.Element {
         disabled = false
     } = props;
 
-    const state = useDropdownState({
-        open,
-        ...(onChangeState !== undefined && {onChangeState}),
-        disabled
-    });
+    const state = useDropdownState({open, ...(onChangeState !== undefined && {onChangeState}), disabled});
+    const value: DropdownContextValue = {open: state.open, onChangeState: state.setOpen, disabled: disabled};
+    const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-    const value: DropdownContextValue = {
-        open: state.open,
-        onChangeState: state.setOpen,
-        disabled: disabled
-    };
+    useClickOutside(dropdownRef, () => onChangeState?.(false));
 
     return (
         <DropdownContext.Provider value={value}>
             <div
+                ref={dropdownRef}
                 className={clsx("dropdown", className)}
                 style={style}
             >
