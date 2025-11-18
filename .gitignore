@@ -34,8 +34,8 @@ lib-cov/
 .cache/
 .parcel-cache/
 .vite/
-.vitepress/cache
-.vitepress/dist
+.vitepress/cache/
+.vitepress/dist/
 
 .vitest/
 
