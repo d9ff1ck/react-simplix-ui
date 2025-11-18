@@ -19,32 +19,36 @@ export default defineConfig({
     base: "/",
 
     themeConfig: {
-        siteTitle: "RSLXUI",
+        siteTitle: "RSLX UI",
 
         search: {
             provider: "local"
         },
 
         nav: [
-            {text: "Guide", link: "/guide/"},
-            {text: "Components", link: "/components/"}
+            {text: "Guide", link: "/guide"},
+            {text: "Components", link: "/components/"},
+            {text: "About", link: "/about/"},
         ],
+
         socialLinks: [
             {icon: "github", link: "https://github.com/d9ff1ck/react-simplix-ui"}
         ],
+
         sidebar: {
             "/components/": [
                 {
                     text: "Components",
-                    collapsed: false,
+                    link: "/components/",
                     items: [
                         {
                             text: "Dropdown",
+                            link: "/components/dropdown/",
                             collapsed: true,
-                            link: "/components/dropdown",
                         },
                         {
                             text: "Typography",
+                            link: "/components/typography/",
                             collapsed: true,
                             items: [
                                 {text: "Blockquote", link: "/components/typography/blockquote"},

@@ -2,6 +2,14 @@
 layout: home
 
 hero:
-	name: React Simplix UI
-	text: A lightweight, modular UI constructor for React — designed to be composed from clear, predictable building blocks< with strict typing and zero unnecessary magic.
+  name: Simplix UI
+  text: Atom-based UI constructor for React
+  tagline: Primitive atoms → predictable patterns → real control.
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /guide
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/d9ff1ck/react-simplix-ui
 ---
