@@ -51,7 +51,7 @@ lib-cov/
 !.vscode/extensions.json
 !.vscode/tasks.json
 
-.idea/
+.idea/*
 *.iml
 *.ipr
 *.iws
