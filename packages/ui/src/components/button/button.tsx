@@ -4,11 +4,11 @@ import {ButtonProps} from "./button.types";
 import "./button.styles.css";
 
 export function Button(props: ButtonProps): JSX.Element {
-    const {children, className, style, variant, ...rest} = props;
+    const {children, className, style, ...rest} = props;
 
     return (
         <button
-            className={clsx(`button ${variant ? `button--${variant}` : ""}`, className)}
+            className={clsx("button", className)}
             style={style}
             {...rest}
         >

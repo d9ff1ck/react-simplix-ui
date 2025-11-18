@@ -34,7 +34,6 @@ lib-cov/
 .cache/
 .parcel-cache/
 .vite/
-*.vitepress
 *.vitepress/cache
 *.vitepress/dist
 
@@ -42,7 +41,6 @@ lib-cov/
 
 .eslintcache
 .stylelintcache
-
 
 .env
 .env.*
