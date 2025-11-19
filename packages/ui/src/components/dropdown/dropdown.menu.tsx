@@ -19,7 +19,7 @@ export function DropdownMenu(props: DropdownMenuProps): JSX.Element | null {
             aria-labelledby={`dropdown-trigger`}
             tabIndex={-1}
 
-            className={clsx("dropdown-menu", className)}
+            className={clsx("dropdown__menu", className)}
             style={style}
 
             {...rest}

@@ -29,7 +29,7 @@ export function DropdownTrigger(props: DropdownTriggerProps): JSX.Element {
             onClick={handle}
             disabled={disabled}
 
-            className={clsx("dropdown-trigger", className)}
+            className={clsx("dropdown__trigger", className)}
             style={style}
 
             {...rest}

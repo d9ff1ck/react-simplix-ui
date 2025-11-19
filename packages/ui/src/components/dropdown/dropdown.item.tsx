@@ -29,7 +29,7 @@ export function DropdownItem(props: DropdownItemProps): JSX.Element {
 
             onClick={handle}
 
-            className={clsx("dropdown-item", className)}
+            className={clsx("dropdown__menu-item", className)}
             style={style}
 
             {...rest}

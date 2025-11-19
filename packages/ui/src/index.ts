@@ -5,6 +5,7 @@ import "./styles/globals.css";
 import "./styles/themes/light.css";
 import "./styles/themes/dark.css";
 
+export * from "./components/accordion";
 export * from "./components/dropdown";
 export * from "./components/typography";
 export * from "./core/hooks";

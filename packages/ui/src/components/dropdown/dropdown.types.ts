@@ -3,13 +3,13 @@ import {ComponentWithChildren, ComponentWithStyles} from "../../lib/types";
 
 export type DropdownContextValue = {
     open: boolean;
-    onChangeState(open: boolean): void;
+    onChangeState: (open: boolean) => void;
     disabled: boolean;
 }
 
 export type DropdownState = {
     open?: boolean | undefined;
-    onChangeState?(open: boolean): void | undefined;
+    onChangeState?: (open: boolean) => void;
     disabled?: boolean | undefined;
 }
 
@@ -29,8 +29,8 @@ export type DropdownMenuProps = ComponentWithChildren
     & Omit<HTMLAttributes<HTMLDivElement>, keyof ComponentWithChildren | keyof ComponentWithStyles>
 
 export type DropdownItemProps = {
-    onSelect?(): void | undefined;
-    disabled?: boolean | undefined;
+        onSelect?: () => void;
+        disabled?: boolean | undefined;
 }
     & ComponentWithChildren
     & ComponentWithStyles

@@ -10,8 +10,7 @@
         "noEmit": true,
         "skipLibCheck": true,
         "paths": {
-            "@simplix/ui": ["../../packages/ui/src"],
-            "@simplix/ui/*": ["../../packages/ui/src/*"],
+            "@simplix/ui": ["../../packages/ui/src/index.ts"]
         },
         "types": ["vite/client"]
     },

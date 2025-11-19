@@ -3,7 +3,7 @@ import {JSX, useRef} from "react";
 import {useClickOutside} from "../../core/hooks";
 import {DropdownContext} from "./dropdown.context";
 import {useDropdownState} from "./dropdown.state";
-import {DropdownContextValue, DropdownRootProps} from "./dropdown.types";
+import {DropdownRootProps} from "./dropdown.types";
 import "./styles/dropdown.root.css";
 
 export function DropdownRoot(props: DropdownRootProps): JSX.Element {
@@ -17,7 +17,7 @@ export function DropdownRoot(props: DropdownRootProps): JSX.Element {
     } = props;
 
     const state = useDropdownState({open, ...(onChangeState !== undefined && {onChangeState}), disabled});
-    const value: DropdownContextValue = {open: state.open, onChangeState: state.setOpen, disabled: disabled};
+    const value = {open: state.open, onChangeState: state.setOpen, disabled: disabled};
     const dropdownRef = useRef<HTMLDivElement | null>(null);
 
     useClickOutside(dropdownRef, () => onChangeState?.(false));
