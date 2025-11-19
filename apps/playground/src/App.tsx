@@ -1,18 +1,15 @@
-import {Accordion} from "@simplix/ui";
+import {Button, Text} from "@simplix/ui";
 import {JSX} from "react";
 import "./App.css";
 
 export function App(): JSX.Element {
     return (
         <div className={`app-container`}>
-            <Accordion>
-                <Accordion.Header>
-                    Header
-                </Accordion.Header>
-                <Accordion.Body>
-                    Body
-                </Accordion.Body>
-            </Accordion>
+            <Button>
+                <Text>
+                    Click Me!
+                </Text>
+            </Button>
         </div>
     );
 }

@@ -1,24 +1,24 @@
 :root {
-    --font-blockqute:         var(--rslx-font-sans);
-    --font-body:              var(--rslx-font-sans);
-    --font-caption:           var(--rslx-font-sans);
+    --font-blockqute:         var(--font-text);
+    --font-body:              var(--font-text);
+    --font-caption:           var(--font-text);
     --font-code:              var(--rslx-font-mono);
-    --font-heading:           var(--rslx-font-sans);
-    --font-label:             var(--rslx-font-sans);
-    --font-overline:          var(--rslx-font-sans);
+    --font-heading:           var(--font-text);
+    --font-label:             var(--font-text);
+    --font-overline:          var(--font-text);
     --font-text:              var(--rslx-font-sans);
 
-    --blockquote-weight:      var(--rslx-font-weight-3);
+    --blockquote-weight:      var(--text-weight);
 
     --body-sm-weight:         var(--rslx-font-weight-4);
-    --body-md-weight:         var(--rslx-font-weight-3);
+    --body-md-weight:         var(--text-weight);
     --body-lg-weight:         var(--rslx-font-weight-2);
 
-    --caption-weight:         var(--rslx-font-weight-3);
+    --caption-weight:         var(--text-weight);
     --code-weight:            var(--rslx-font-weight-2);
 
-    --heading-h6-weight:      var(--rslx-font-weight-3);
-    --heading-h5-weight:      var(--rslx-font-weight-3);
+    --heading-h6-weight:      var(--text-weight);
+    --heading-h5-weight:      var(--text-weight);
     --heading-h4-weight:      var(--rslx-font-weight-2);
     --heading-h3-weight:      var(--rslx-font-weight-2);
     --heading-h2-weight:      var(--rslx-font-weight-1);
@@ -28,16 +28,16 @@
     --overline-weight:        var(--rslx-font-weight-4);
     --text-weight:            var(--rslx-font-weight-3);
 
-    --blockquote-size:        var(--rslx-size-3);
+    --blockquote-size:        var(--text-size);
 
     --body-sm-size:           var(--rslx-size-1);
-    --body-md-size:           var(--rslx-size-3);
+    --body-md-size:           var(--text-size);
     --body-lg-size:           var(--rslx-size-4);
 
     --caption-size:           var(--rslx-size-2);
-    --code-size:              var(--rslx-size-3);
+    --code-size:              var(--text-size);
 
-    --heading-h6-size:        var(--rslx-size-3);
+    --heading-h6-size:        var(--text-size);
     --heading-h5-size:        var(--rslx-size-4);
     --heading-h4-size:        var(--rslx-size-5);
     --heading-h3-size:        var(--rslx-size-6);
@@ -48,20 +48,20 @@
     --overline-size:          var(--rslx-size-2);
     --text-size:              var(--rslx-size-3);
 
-    --blockquote-line-height: var(--rslx-line-height-2);
+    --blockquote-line-height: var(--text-line-height);
 
     --body-sm-line-height:    var(--rslx-line-height-7);
     --body-md-line-height:    var(--rslx-line-height-6);
     --body-lg-line-height:    var(--rslx-line-height-5);
 
     --caption-line-height:    var(--rslx-line-height-7);
-    --code-line-height:       var(--rslx-line-height-2);
+    --code-line-height:       var(--text-line-height);
 
     --heading-h6-line-height: var(--rslx-line-height-6);
     --heading-h5-line-height: var(--rslx-line-height-5);
     --heading-h4-line-height: var(--rslx-line-height-4);
     --heading-h3-line-height: var(--rslx-line-height-3);
-    --heading-h2-line-height: var(--rslx-line-height-2);
+    --heading-h2-line-height: var(--text-line-height);
     --heading-h1-line-height: var(--rslx-line-height-1);
 
     --label-line-height:      var(--rslx-line-height-6);

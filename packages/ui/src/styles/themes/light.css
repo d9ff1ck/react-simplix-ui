@@ -1,3 +1,17 @@
 :root {
+    --button-background:          var(--rslx-color-accent-6);
+    --button-foreground:          var(--rslx-color-neutral-light-1);
 
+    --button-background-hover:    var(--rslx-color-accent-5);
+    --button-foreground-hover:    var(--button-foreground);
+
+    --button-background-focus:    var(--rslx-color-accent-6);
+    --button-foreground-focus:    var(--button-foreground);
+    --button-outline-focus:        var(--rslx-color-neurtal-dark-1);
+
+    --button-background-active:   var(--rslx-color-accent-7);
+    --button-foreground-active:   var(--button-foreground);
+
+    --button-background-disabled: var(--rslx-color-accent-10);
+    --button-foreground-disabled: var(--rslx-color-accent-1);
 }

@@ -23,4 +23,38 @@
     --rslx-line-height-5: 1.35;
     --rslx-line-height-6: 1.40;
     --rslx-line-height-7: 1.45;
+
+    --rslx-color-accent-1:         hsl(240, 100%, 84%);
+    --rslx-color-accent-2:         hsl(240, 100%, 80%);
+    --rslx-color-accent-3:         hsl(240, 100%, 76%);
+    --rslx-color-accent-4:         hsl(240, 100%, 72%);
+    --rslx-color-accent-5:         hsl(240, 100%, 68%);
+    --rslx-color-accent-6:         hsl(240, 100%, 64%);
+    --rslx-color-accent-7:         hsl(240, 100%, 56%);
+    --rslx-color-accent-8:         hsl(240, 100%, 48%);
+    --rslx-color-accent-9:         hsl(240, 100%, 40%);
+    --rslx-color-accent-10:        hsl(240, 100%, 32%);
+
+    --rslx-color-neutral-light-1:  hsl(240, 16%, 96%);
+    --rslx-color-neutral-light-2:  hsl(240, 16%, 92%);
+    --rslx-color-neutral-light-3:  hsl(240, 16%, 88%);
+    --rslx-color-neutral-light-4:  hsl(240, 16%, 84%);
+    --rslx-color-neutral-light-5:  hsl(240, 16%, 80%);
+    --rslx-color-neutral-light-6:  hsl(240, 16%, 76%);
+    --rslx-color-neutral-light-7:  hsl(240, 16%, 72%);
+    --rslx-color-neutral-light-8:  hsl(240, 16%, 68%);
+    --rslx-color-neutral-light-9:  hsl(240, 16%, 64%);
+    --rslx-color-neutral-light-10: hsl(240, 16%, 60%);
+
+    --rslx-color-neurtal-dark-1:   hsl(240, 16%, 4%);
+    --rslx-color-neurtal-dark-2:   hsl(240, 16%, 8%);
+    --rslx-color-neurtal-dark-3:   hsl(240, 16%, 12%);
+    --rslx-color-neurtal-dark-4:   hsl(240, 16%, 16%);
+    --rslx-color-neurtal-dark-5:   hsl(240, 16%, 20%);
+    --rslx-color-neurtal-dark-6:   hsl(240, 16%, 24%);
+    --rslx-color-neurtal-dark-7:   hsl(240, 16%, 28%);
+    --rslx-color-neurtal-dark-8:   hsl(240, 16%, 32%);
+    --rslx-color-neurtal-dark-9:   hsl(240, 16%, 36%);
+    --rslx-color-neurtal-dark-10:  hsl(240, 16%, 40%);
+
 }

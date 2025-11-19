@@ -1,0 +1,9 @@
+:root {
+    --button-padding-vertical: 0.5rem;
+    --button-padding-horizontal: 1.5rem;
+
+    --button-border-radius: 0.5rem;
+    --button-outline-width: 0.125rem;
+    --button-outline-offset: 0.125rem;
+    --button-transition: background .16s ease-out, border-color .16s ease-out;
+}
