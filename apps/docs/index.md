@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide
+      link: /documantetion
     - theme: alt
       text: View on GitHub
       link: https://github.com/d9ff1ck/react-simplix-ui

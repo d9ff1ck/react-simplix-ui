@@ -26,8 +26,8 @@ export default defineConfig({
         },
 
         nav: [
-            {text: "Guide", link: "/guide"},
-            {text: "Components", link: "/components/"},
+            {text: "Learn", link: "/documentation"},
+            {text: "Reference", link: "/reference/"},
             {text: "About", link: "/about/"},
         ],
 
@@ -36,34 +36,48 @@ export default defineConfig({
         ],
 
         sidebar: {
-            "/components/": [
+            "/reference/": [
+                {
+                    text: "Hooks",
+                    link: "/reference/hooks/",
+                    items: [
+                        {
+                            text: "useClickOutside()",
+                            link: "/reference/hooks/useClickOutside"
+                        }
+                    ]
+                },
                 {
                     text: "Components",
-                    link: "/components/",
+                    link: "/reference/components/",
                     items: [
                         {
                             text: "Dropdown",
-                            link: "/components/dropdown/",
+                            link: "/reference/components/dropdown/",
                             collapsed: true,
                         },
                         {
                             text: "Typography",
-                            link: "/components/typography/",
+                            link: "/reference/components/typography/",
                             collapsed: true,
                             items: [
-                                {text: "Blockquote", link: "/components/typography/blockquote"},
-                                {text: "Body", link: "/components/typography/body"},
-                                {text: "Caption", link: "/components/typography/caption"},
-                                {text: "Code", link: "/components/typography/code"},
-                                {text: "Heading", link: "/components/typography/heading"},
-                                {text: "Label", link: "/components/typography/label"},
-                                {text: "Overline", link: "/components/typography/overline"},
-                                {text: "Text", link: "/components/typography/text"}
+                                {text: "Blockquote", link: "/reference/components/typography/blockquote/"},
+                                {text: "Body", link: "/reference/components/typography/body/"},
+                                {text: "Caption", link: "/reference/components/typography/caption/"},
+                                {text: "Code", link: "/reference/components/typography/code/"},
+                                {text: "Heading", link: "/reference/components/typography/heading/"},
+                                {text: "Label", link: "/reference/components/typography/label/"},
+                                {text: "Overline", link: "/reference/components/typography/overline/"},
+                                {text: "Text", link: "/reference/components/typography/text/"}
                             ]
                         }
                     ]
                 }
             ]
+        },
+        docFooter: {
+            prev: false,
+            next: false
         }
     },
 

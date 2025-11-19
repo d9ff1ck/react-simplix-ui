@@ -4,10 +4,10 @@ title: Dropdown
 
 prev:
   text: "Components"
-  link: "/components/"
+  link: "/reference/components/"
 next:
   text: "Typography"
-  link: "/components/typography/"
+  link: "/reference/components/typography/"
 ---
 
 # Dropdown

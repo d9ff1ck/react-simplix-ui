@@ -4,6 +4,4 @@ title: Guide
 aside: true
 ---
 
-# Guide
-
-## Introduction
+# Documentation
