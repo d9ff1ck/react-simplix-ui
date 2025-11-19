@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import {ElementType, JSX, MouseEventHandler} from "react";
-import {ElementOf} from "../../lib/types";
+import {ElementOf} from "../../shared";
 import {useAccordionContext} from "./accordion.context";
 import {AccordionHeaderProps} from "./accordion.types";
 import "./styles/accordion.header.css";

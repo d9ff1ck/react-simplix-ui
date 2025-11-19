@@ -1,15 +1,9 @@
-import {ComponentPropsWithoutRef, ComponentPropsWithRef, CSSProperties, ElementType, ReactNode, Ref} from "react";
+import {ComponentPropsWithoutRef, ComponentPropsWithRef, ElementType, Ref} from "react";
 import {JSX} from "react/jsx-runtime";
+import {ComponentWithChildren} from "./componentWithChildren";
+import {ComponentWithStyles} from "./componentWithStyles";
 
-export type ComponentWithStyles = {
-    className?: string | undefined;
-    style?: CSSProperties | undefined;
-}
-export type ComponentWithChildren = {
-    children?: ReactNode | undefined;
-}
-
-export type PolymorphicPropsWithoutRef<T extends ElementType, P = {}> =
+export type PolymorphicComponentWithoutRef<T extends ElementType, P = {}> =
     {
         as?: T | undefined;
     }
@@ -18,7 +12,7 @@ export type PolymorphicPropsWithoutRef<T extends ElementType, P = {}> =
     & ComponentWithChildren
     & Omit<ComponentPropsWithoutRef<T>, | keyof ComponentWithStyles | keyof ComponentWithChildren | keyof P | "as">;
 
-export type PolymorphicPropsWithRef<T extends ElementType, P> = {
+export type PolymorphicComponentWithRef<T extends ElementType, P> = {
         as?: T | undefined;
         ref?: Ref<ElementOf<T>>
     }

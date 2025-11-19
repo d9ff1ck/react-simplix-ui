@@ -1,4 +1,4 @@
-import {ComponentWithChildren, ComponentWithStyles} from "../../../lib/types";
+import {ComponentWithChildren, ComponentWithStyles} from "../../../shared";
 
 export type BlockquoteProps = {
     cite?: string | undefined;

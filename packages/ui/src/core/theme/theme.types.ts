@@ -1,4 +1,4 @@
-import {ComponentWithChildren} from "../../lib/types";
+import {ComponentWithChildren} from "../../shared";
 
 export type ThemeState = {
     theme?: string;

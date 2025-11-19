@@ -1,4 +1,4 @@
 import {ElementType} from "react";
-import {PolymorphicPropsWithoutRef} from "../../../lib/types";
+import {PolymorphicComponentWithoutRef} from "../../../shared";
 
-export type OverlineProps<T extends ElementType = "span"> = PolymorphicPropsWithoutRef<T>
+export type OverlineProps<T extends ElementType = "span"> = PolymorphicComponentWithoutRef<T>

@@ -1,4 +1,4 @@
 import {ElementType} from "react";
-import {PolymorphicPropsWithoutRef} from "../../../lib/types";
+import {PolymorphicComponentWithoutRef} from "../../../shared";
 
-export type CodeProps<T extends ElementType = "code"> = PolymorphicPropsWithoutRef<T>
+export type CodeProps<T extends ElementType = "code"> = PolymorphicComponentWithoutRef<T>

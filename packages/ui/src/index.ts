@@ -11,4 +11,4 @@ export * from "./components/typography";
 export * from "./core/hooks";
 export * from "./core/portal";
 export * from "./core/theme";
-export * from "./lib/types";
+export * from "./shared";

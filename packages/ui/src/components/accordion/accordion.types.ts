@@ -1,5 +1,5 @@
 import {ElementType} from "react";
-import {ComponentWithChildren, ComponentWithStyles, PolymorphicPropsWithRef} from "../../lib/types";
+import {ComponentWithChildren, ComponentWithStyles, PolymorphicComponentWithRef} from "../../shared";
 
 export type AccordionContextValue = {
     open: boolean;
@@ -17,6 +17,6 @@ export type UseAccordionStateResult = {
 
 export type AccordionRootProps = AccordionState & ComponentWithChildren & ComponentWithStyles;
 
-export type AccordionHeaderProps<T extends ElementType = "div"> = PolymorphicPropsWithRef<T, {}>
+export type AccordionHeaderProps<T extends ElementType = "div"> = PolymorphicComponentWithRef<T, {}>
 
-export type AccordionBodyProps<T extends ElementType> = PolymorphicPropsWithRef<T, {}>
+export type AccordionBodyProps<T extends ElementType> = PolymorphicComponentWithRef<T, {}>

@@ -1,7 +1,7 @@
 import {ElementType} from "react";
-import {PolymorphicPropsWithoutRef} from "../../../lib/types";
+import {PolymorphicComponentWithoutRef} from "../../../shared";
 
 export type BodySize = "small" | "medium" | "large";
-export type BodyProps<T extends ElementType = "p"> = PolymorphicPropsWithoutRef<T, {
+export type BodyProps<T extends ElementType = "p"> = PolymorphicComponentWithoutRef<T, {
     size?: BodySize | undefined;
 }>
