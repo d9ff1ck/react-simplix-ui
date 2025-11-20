@@ -1,9 +1,23 @@
 :root {
-    --button-padding-vertical: 0.5rem;
-    --button-padding-horizontal: 1.5rem;
+    --button-background: var(--primary);
+    --button-foreground: var(--on-primary);
 
-    --button-border-radius: 0.5rem;
-    --button-outline-width: 0.125rem;
-    --button-outline-offset: 0.125rem;
-    --button-transition: background .16s ease-out, border-color .16s ease-out;
+    --button-background--hover: var(--primary--hover);
+    --button-foreground--hover: var(--button-foreground);
+
+    --button-background--focus: var(--button-background);
+    --button-foreground--focus: var(--button-foreground);
+    --button-outline-focus: var(--surface-background--inverse);
+
+    --button-background--active: var(--primary--active);
+    --button-foreground--active: var(--button-foreground);
+
+    --button-background--disabled: var(--primary--disabled);
+    --button-foreground--disabled: var(--on-primary--muted);
+
+    --button-padding: 0.5rem 1.5rem;
+    --button-rounded: 0.5rem;
+    --button-outline--width: 0.125rem;
+    --button-outline--offset: 0.125rem;
+    --button-transition: background .16s ease-out;
 }

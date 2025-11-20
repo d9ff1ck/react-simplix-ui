@@ -1,17 +1,22 @@
 :root {
-    --button-background:          var(--rslx-color-accent-6);
-    --button-foreground:          var(--rslx-color-neutral-light-1);
+    --surface-lowest: var(--rslx-color-neutral-light-1);
+    --surface-background: var(--rslx-color-neutral-light-2);
+    --surface-background--inverse: var(--rslx-color-neutral-dark-2);
+    --surface-low: var(--rslx-color-neutral-light-3);
+    --surface-medium: var(--rslx-color-neutral-light-4);
+    --surface-high: var(--rslx-color-neutral-light-5);
+    --surface-highest: var(--rslx-color-neutral-light-6);
 
-    --button-background-hover:    var(--rslx-color-accent-5);
-    --button-foreground-hover:    var(--button-foreground);
+    --on-surface: var(--rslx-color-neutral-dark-1);
+    --on-surface--inverse: var(--rslx-color-neutral-light-1);
+    --on-surface--muted: var(--rslx-color-neutral-dark-5);
+    --on-surface--subtle: var(--rslx-color-neutral-dark-9);
 
-    --button-background-focus:    var(--rslx-color-accent-6);
-    --button-foreground-focus:    var(--button-foreground);
-    --button-outline-focus:        var(--rslx-color-neurtal-dark-1);
-
-    --button-background-active:   var(--rslx-color-accent-7);
-    --button-foreground-active:   var(--button-foreground);
-
-    --button-background-disabled: var(--rslx-color-accent-10);
-    --button-foreground-disabled: var(--rslx-color-accent-1);
+    --on-primary: var(--rslx-color-accent-1);
+    --on-primary--muted: var(--rslx-color-accent-2);
+    --primary: var(--rslx-color-accent-6);
+    --primary--hover: var(--rslx-color-accent-7);
+    --primary--focus: var(--rslx-color-accent-6);
+    --primary--active: var(--rslx-color-accent-8);
+    --primary--disabled: var(--rslx-color-accent-10);
 }
