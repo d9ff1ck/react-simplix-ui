@@ -1,7 +1,5 @@
 export {type ComponentWithChildren} from "./componentWithChildren";
 export {type ComponentWithStyles} from "./componentWithStyles";
-export {
-    type PolymorphicComponentWithoutRef,
-    type PolymorphicComponentWithRef,
-    type ElementOf
-} from "./polymorphic";
+export {type ElementOf} from "./elementOf";
+export {type PolymorphicComponentWithoutRef} from "./polymorphicComponentWithoutRef";
+export {type PolymorphicComponentWithRef} from "./polymorphicComponentWithRef";

@@ -7,7 +7,7 @@
 
     --button-background--focus: var(--button-background);
     --button-foreground--focus: var(--button-foreground);
-    --button-outline-focus: var(--surface-background--inverse);
+    --button-outline--focus: var(--surface-background--inverse);
 
     --button-background--active: var(--primary--active);
     --button-foreground--active: var(--button-foreground);

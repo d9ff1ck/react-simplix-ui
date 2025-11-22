@@ -14,7 +14,7 @@
 .button:focus-visible {
     background: var(--button-background--focus);
     color: var(--button-foreground--focus);
-    outline: var(--button-outline--width) solid var(--button-outline-focus);
+    outline: var(--button-outline--width) solid var(--button-outline--focus);
     outline-offset: var(--button-outline--offset);
 }
 
