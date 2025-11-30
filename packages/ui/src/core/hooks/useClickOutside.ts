@@ -7,8 +7,9 @@ export function useClickOutside(
     useEffect(() => {
         const listener = (event: MouseEvent | TouchEvent) => {
             const element = reference.current;
+            const target = event.target as Node | null;
 
-            if (!element || element.contains(event.target as Node)) {
+            if (!element || !target || element.contains(event.target as Node)) {
                 return;
             }
             handler(event);
@@ -22,5 +23,5 @@ export function useClickOutside(
             document.removeEventListener("touchstart", listener);
         }
 
-    }, [reference, handler]);
+    }, [handler]);
 }

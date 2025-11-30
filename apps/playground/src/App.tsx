@@ -1,10 +1,12 @@
-import {Button, Text} from "@simplix/ui";
+import {Button, Text, useFocusTrap} from "@simplix/ui";
 import {JSX} from "react";
 import "./App.css";
 
 export function App(): JSX.Element {
+    useFocusTrap(null)
     return (
         <div className={`app-container`}>
+
             <Button>
                 <Text>
                     Click Me!

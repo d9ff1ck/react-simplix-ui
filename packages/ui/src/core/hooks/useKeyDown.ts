@@ -3,15 +3,16 @@ import {useEffect, useRef} from "react";
 type Key = string;
 
 export function useKeyDown(keys: Key | Key[], handler: (event: KeyboardEvent) => void) {
-    const reference = useRef(handler);
-    reference.current = handler;
+    const handlerReference = useRef(handler);
+    const keysReference = useRef<Key[]>([]);
+
+    handlerReference.current = handler;
+    keysReference.current = Array.isArray(keys) ? keys : [keys];
 
     useEffect(() => {
-        const targets = Array.isArray(keys) ? keys : [keys];
-
         const listener = (event: KeyboardEvent) => {
-            if (targets.includes(event.key)) {
-                reference.current(event);
+            if (keysReference.current.includes(event.key)) {
+                handlerReference.current(event);
             }
         };
 
@@ -19,5 +20,5 @@ export function useKeyDown(keys: Key | Key[], handler: (event: KeyboardEvent) =>
         return () => {
             window.removeEventListener("keydown", listener);
         };
-    }, [keys]);
+    }, []);
 }
