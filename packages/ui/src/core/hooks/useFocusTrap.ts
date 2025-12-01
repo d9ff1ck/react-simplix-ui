@@ -1,5 +1,5 @@
 import {useEffect, useRef} from "react";
-import {FOCUSABLE_SELECTORS} from "../constants";
+import {FOCUSABLE_SELECTORS} from "../../internal";
 
 type InitialTarget =
     { type: "index", current: number }
