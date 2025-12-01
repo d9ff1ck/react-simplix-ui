@@ -1,16 +1,24 @@
 {
     "name": "react-simplix-repo",
     "private": true,
-    "version": "0.0.0",
-    "packageManager": "pnpm@10.22.0",
-    "scripts": {
-        "dev": "pnpm --filter playground dev",
-        "build": "pnpm -r build",
-        "test": "pnpm -r test",
-        "lint": "pnpm -r lint"
-    },
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
     "devDependencies": {
-        "typescript": "^5.9.3",
-        "@types/node": "^24.10.0"
-    }
+        "@typescript-eslint/eslint-plugin": "^8.48.0",
+        "@typescript-eslint/parser": "^8.48.0",
+        "eslint": "^9.39.1",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-react-hooks": "^7.0.1",
+        "prettier": "^3.7.3",
+        "tsup": "^8.5.1",
+        "@types/react": "^19.2",
+        "@types/react-dom": "^19.2",
+        "react": "^19.2",
+        "react-dom": "^19.2",
+        "typescript": "^5.7"
+    },
+    "packageManager": "pnpm@10.22.0"
 }

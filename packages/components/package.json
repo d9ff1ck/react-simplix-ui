@@ -1,0 +1,64 @@
+{
+    "name": "@simplix/core",
+    "version": "0.1.0",
+    "description": "A lightweight, modular UI constructor for React. Designed around simple building blocks, strict typing, and zero unnecessary magic.",
+    "license": "MIT",
+    "type": "module",
+    "author": {
+        "name": "Deffick",
+        "url": "https://github.com/d9ff1ck"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/d9ff1ck/react-simplix-ui.git"
+    },
+    "homepage": "https://github.com/d9ff1ck/react-simplix-ui#readme",
+    "bugs": {
+        "url": "https://github.com/d9ff1ck/react-simplix-ui/issues"
+    },
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        },
+        "./*": {
+            "import": "./dist/*.js",
+            "require": "./dist/*.cjs"
+        }
+    },
+    "sideEffects": false,
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "peerDependencies": {
+        "react": ">=18",
+        "react-dom": ">=18"
+    },
+    "dependencies": {
+        "clsx": "^2.1.1"
+    },
+    "engines": {
+        "node": ">=18",
+        "pnpm": ">=9"
+    },
+    "scripts": {
+        "build": "tsup --config ../.config/tsup.config.ts",
+        "clean": "rm -rf dist"
+    },
+    "keywords": [
+        "react",
+        "simplix",
+        "ui",
+        "atomic",
+        "components",
+        "typescript",
+        "design-system",
+        "ui-constructor"
+    ],
+    "packageManager": "pnpm@10.22.0"
+}
