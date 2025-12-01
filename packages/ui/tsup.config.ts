@@ -1,23 +1,27 @@
 import {defineConfig} from "tsup";
 
 export default defineConfig({
-    entry: ["src/index.ts"],
-
+    entry: {
+        index: "src/index.ts"
+    },
     format: ["esm", "cjs"],
-    target: "es2020",
 
-    sourcemap: true,
+    bundle: true,
     clean: true,
-    bundle: false,
-
-    dts: true,
-
+    dts: {
+        entry: "src/index.ts",
+        compilerOptions: {
+            project: "tsconfig.library.json"
+        }
+    },
     external: ["react", "react-dom"],
-
-    minify: false,
+    minify: true,
+    minifyWhitespace: true,
+    splitting: true,
+    sourcemap: false,
+    treeshake: true,
 
     esbuildOptions(options) {
-        options.platform = "browser";
         options.loader = {
             ".css": "css"
         };

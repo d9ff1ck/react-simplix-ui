@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "description": "A lightweight, modular UI constructor for React. Designed around simple building blocks, strict typing, and zero unnecessary magic.",
     "license": "MIT",
+    "type": "module",
 
     "author": {
         "name": "Deffick",
@@ -19,20 +20,24 @@
         "url": "https://github.com/d9ff1ck/react-simplix-ui/issues"
     },
 
-    "type": "module",
-    "main": "./dist/index.js",
-    "module": "./dist/index.cjs",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
 
     "exports": {
         ".": {
-            "types": "./dist/index.d.ts",
             "import": "./dist/index.js",
             "require": "./dist/index.cjs"
+        },
+        "./*": {
+            "import": "./dist/*.js",
+            "require": "./dist/*.cjs"
         }
     },
 
-    "sideEffects": false,
+    "sideEffects": [
+        "**/*.css"
+    ],
 
     "files": [
         "dist",
@@ -64,10 +69,13 @@
     },
 
     "scripts": {
+        "dev": "tsup --watch --onSuccess \"pnpm typecheck\"",
+        "build": "pnpm clean && tsup && pnpm typecheck",
         "clean": "rm -rf dist",
-        "dev": "tsup --watch",
-        "build": "tsup",
-        "lint": "tsc --noEmit"
+        "lint": "tsc -p tsconfig.library.json --noEmit",
+        "lint:node": "tsc -p tsconfig.node.json --noEmit",
+        "typecheck": "tsc -p tsconfig.library.json --noEmit",
+        "prepublishOnly": "pnpm build"
     },
 
     "keywords": [
