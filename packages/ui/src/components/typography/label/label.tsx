@@ -1,8 +1,9 @@
 import clsx from "clsx";
-import {ElementType, JSX} from "react";
+import type {ElementType, JSX} from "react";
+
 import {Text} from "../text";
 import "./label.styles.css";
-import {LabelProps} from "./label.types";
+import type {LabelProps} from "./label.types";
 
 export function Label(props: LabelProps): JSX.Element {
     const {as, className, ...rest} = props;

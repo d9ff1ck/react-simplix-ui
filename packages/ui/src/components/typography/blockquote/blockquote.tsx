@@ -1,14 +1,14 @@
 import clsx from "clsx";
-import {ElementType, JSX} from "react";
-import {BlockquoteProps} from "./blockquote.types";
+import type {JSX} from "react";
+
 import {Text} from "../text";
-import "./blockquote.styles.css"
+import type {BlockquoteProps} from "./blockquote.types";
+import "./blockquote.styles.css";
 
 export function Blockquote(props: BlockquoteProps): JSX.Element {
     const {cite, className, ...rest} = props;
-    const Tag: ElementType = "blockquote";
 
     return (
-        <Text as={Tag} className={clsx("blockquote", className)} {...rest}/>
+        <Text as={"blockquote"} cite={cite} className={clsx("blockquote", className)} {...rest}/>
     )
 }

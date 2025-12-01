@@ -1,9 +1,11 @@
 import clsx from "clsx";
-import {JSX, useRef} from "react";
-import {useClickOutside} from "../../core/hooks";
+import type {JSX} from "react";
+import { useRef} from "react";
+
 import {DropdownContext} from "./dropdown.context";
 import {useDropdownState} from "./dropdown.state";
-import {DropdownRootProps} from "./dropdown.types";
+import type {DropdownRootProps} from "./dropdown.types";
+import {useClickOutside} from "../../core";
 import "./styles/dropdown.root.css";
 
 export function DropdownRoot(props: DropdownRootProps): JSX.Element {

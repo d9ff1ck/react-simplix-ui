@@ -1,5 +1,6 @@
 import {useState} from "react";
-import {AccordionState, UseAccordionStateResult} from "./accordion.types";
+
+import type {AccordionState, UseAccordionStateResult} from "./accordion.types";
 
 export function useAccordionState(props: AccordionState): UseAccordionStateResult {
     const {open: PropertyOpen = false} = props;

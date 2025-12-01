@@ -1,7 +1,8 @@
 import clsx from "clsx";
-import {ElementType, JSX} from "react";
+import type {ElementType, JSX} from "react";
+
 import {useAccordionContext} from "./accordion.context";
-import {AccordionBodyProps} from "./accordion.types";
+import type {AccordionBodyProps} from "./accordion.types";
 import "./styles/accordion.body.css";
 
 export function AccordionBody<T extends ElementType>(props: AccordionBodyProps<T>): JSX.Element | null {

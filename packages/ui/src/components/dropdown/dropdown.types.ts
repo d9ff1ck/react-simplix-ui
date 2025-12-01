@@ -1,5 +1,6 @@
-import {ButtonHTMLAttributes, HTMLAttributes} from "react";
-import {ComponentWithChildren, ComponentWithStyles} from "../../shared";
+import type {ButtonHTMLAttributes, HTMLAttributes} from "react";
+
+import type {ComponentWithChildren, ComponentWithStyles} from "../../shared";
 
 export type DropdownContextValue = {
     open: boolean;

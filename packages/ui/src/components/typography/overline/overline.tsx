@@ -1,6 +1,7 @@
 import clsx from "clsx";
-import {ElementType, JSX} from "react";
-import {OverlineProps} from "./overline.types";
+import type {ElementType, JSX} from "react";
+
+import type {OverlineProps} from "./overline.types";
 import {Text} from "../text";
 import "./overline.styles.css";
 

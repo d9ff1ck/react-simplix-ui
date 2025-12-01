@@ -1,6 +1,7 @@
 import clsx from "clsx";
-import {ElementType, JSX} from "react";
-import {CaptionProps} from "./caption.types";
+import type {ElementType, JSX} from "react";
+
+import type {CaptionProps} from "./caption.types";
 import {Text} from "../text";
 import "./caption.styles.css"
 

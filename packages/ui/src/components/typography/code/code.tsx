@@ -1,7 +1,8 @@
 import clsx from "clsx";
-import {ElementType, JSX} from "react";
+import type {ElementType, JSX} from "react";
+
 import {Text} from "../text";
-import {CodeProps} from "./code.types";
+import type {CodeProps} from "./code.types";
 import "./code.styles.css";
 
 export function Code(props: CodeProps): JSX.Element {

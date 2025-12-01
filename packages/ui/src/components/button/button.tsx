@@ -1,6 +1,7 @@
 import clsx from "clsx";
-import {JSX} from "react";
-import {ButtonProps} from "./button.types";
+import type {JSX} from "react";
+
+import type {ButtonProps} from "./button.types";
 import "./button.styles.css";
 
 export function Button(props: ButtonProps): JSX.Element {

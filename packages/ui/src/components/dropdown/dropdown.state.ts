@@ -1,5 +1,6 @@
 import {useCallback} from "react";
-import {DropdownState, UseDropdownStateResult} from "./dropdown.types";
+
+import type {DropdownState, UseDropdownStateResult} from "./dropdown.types";
 
 export function useDropdownState(props: DropdownState): UseDropdownStateResult {
     const {

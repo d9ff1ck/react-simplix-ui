@@ -1,5 +1,10 @@
-import {ReactNode} from "react";
+import type { ReactNode } from "react";
 
+/**
+ * Base child prop used by components that render nested React nodes.
+ * Applied across Simplix UI to keep layout and wrapper components consistent.
+ */
 export type ComponentWithChildren = {
-    children?: ReactNode | undefined;
-}
+    /** Optional React children rendered inside the component. */
+    children?: ReactNode;
+};

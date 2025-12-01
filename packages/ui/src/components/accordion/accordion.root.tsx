@@ -1,8 +1,9 @@
 import clsx from "clsx";
-import {JSX} from "react";
+import type {JSX} from "react";
+
 import {AccordionContext} from "./accordion.context";
 import {useAccordionState} from "./accordion.state";
-import {AccordionRootProps} from "./accordion.types";
+import type {AccordionRootProps} from "./accordion.types";
 import "./styles/accordion.root.css";
 
 export function AccordionRoot(props: AccordionRootProps): JSX.Element {

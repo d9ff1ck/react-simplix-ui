@@ -1,8 +1,9 @@
 import clsx from "clsx";
-import {ElementType, JSX, MouseEventHandler} from "react";
-import {ElementOf} from "../../shared";
+import type {ElementType, JSX, MouseEventHandler} from "react";
+
 import {useAccordionContext} from "./accordion.context";
-import {AccordionHeaderProps} from "./accordion.types";
+import type {AccordionHeaderProps} from "./accordion.types";
+import type {ElementOf} from "../../shared";
 import "./styles/accordion.header.css";
 
 export function AccordionHeader<T extends ElementType = "div">(props: AccordionHeaderProps<T>): JSX.Element {

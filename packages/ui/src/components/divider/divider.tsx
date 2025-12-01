@@ -1,6 +1,7 @@
 import clsx from "clsx";
-import {JSX} from "react";
-import {DividerProps} from "./divider.types";
+import type {JSX} from "react";
+
+import type {DividerProps} from "./divider.types";
 import "./divider.styles.css";
 
 export function Divider(props: DividerProps): JSX.Element {

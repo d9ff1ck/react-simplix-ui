@@ -1,4 +1,5 @@
 import {useEffect, useRef} from "react";
+
 import {FOCUSABLE_SELECTORS} from "../../internal";
 
 type InitialTarget =
@@ -7,10 +8,26 @@ type InitialTarget =
     | { type: "auto" };
 
 export type FocusTrapProps = {
+    /**
+     * Enables or disables the focus trap.
+     * When set to `"disabled"`, all behavior is suspended.
+     */
     status?: "active" | "disabled";
+
+    /**
+     * Determines which element receives focus when the trap activates:
+     * - `"auto"` — focuses the first focusable child.
+     * - `"index"` — focuses by numeric index within the focusable list.
+     * - `"element"` — focuses a specific HTMLElement if it is inside the container.
+     */
     initialFocus?: InitialTarget;
+
+    /**
+     * Whether to restore focus to the previously active element on cleanup.
+     * Enabled by default.
+     */
     restoreFocus?: boolean;
-}
+};
 
 const getFocusable = (element: HTMLElement): HTMLElement[] => Array.from(
     element.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS)
@@ -18,6 +35,22 @@ const getFocusable = (element: HTMLElement): HTMLElement[] => Array.from(
 
 const getActive = (): HTMLElement | null => document.activeElement as HTMLElement | null;
 
+/**
+ * Traps keyboard focus within a given DOM element.
+ *
+ * Commonly used in dialogs, modals, popovers, drawers, and other
+ * overlay components that must keep keyboard focus inside themselves
+ * for accessibility and predictable navigation.
+ *
+ * Features:
+ * - Automatically moves focus inside the container on activation.
+ * - Supports multiple initial-focus strategies (`auto`, index, element).
+ * - Restores focus to the previously active element (optional).
+ * - Handles forward and backward Tab navigation.
+ * - Intentionally avoids full dependency tracking — recreating the trap
+ *   on every render would break usability. This is why `exhaustive-deps`
+ *   is disabled for specific effects.
+ */
 export function useFocusTrap(element: HTMLElement | null, props: FocusTrapProps = {}) {
     const {status = "active", initialFocus = {type: "auto"}, restoreFocus = true} = props;
     const isEnabled = status === "active" && element;
@@ -57,7 +90,10 @@ export function useFocusTrap(element: HTMLElement | null, props: FocusTrapProps 
                 previous.current.focus();
             }
         };
-    }, [isEnabled]);
+        },
+        /* eslint-disable-next-line react-hooks/exhaustive-deps */
+        [isEnabled]
+    );
 
     useEffect(() => {
         if (!isEnabled) {
@@ -97,5 +133,8 @@ export function useFocusTrap(element: HTMLElement | null, props: FocusTrapProps 
         return () => {
             document.removeEventListener("keydown", listener);
         };
-    }, [status, element]);
+        },
+        /* eslint-disable-next-line react-hooks/exhaustive-deps */
+        [status, element]
+    );
 }

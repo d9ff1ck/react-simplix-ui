@@ -1,5 +1,7 @@
-import {Context, createContext, useContext} from "react";
-import {DropdownContextValue} from "./dropdown.types";
+import type {Context} from "react";
+import { createContext, useContext} from "react";
+
+import type {DropdownContextValue} from "./dropdown.types";
 
 export const DropdownContext: Context<DropdownContextValue | null> = createContext<DropdownContextValue | null>(null);
 

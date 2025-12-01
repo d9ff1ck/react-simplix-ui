@@ -1,5 +1,6 @@
-import {ElementType} from "react";
-import {ComponentWithChildren, ComponentWithStyles, PolymorphicComponentWithRef} from "../../shared";
+import type {ElementType} from "react";
+
+import type {ComponentWithChildren, ComponentWithStyles, PolymorphicComponentWithRef} from "../../shared";
 
 export type AccordionContextValue = {
     open: boolean;

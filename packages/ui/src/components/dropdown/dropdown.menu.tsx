@@ -1,7 +1,8 @@
 import clsx from "clsx";
-import {JSX} from "react";
+import type {JSX} from "react";
+
 import {useDropdownContext} from "./dropdown.context";
-import {DropdownMenuProps} from "./dropdown.types";
+import type {DropdownMenuProps} from "./dropdown.types";
 import "./styles/dropdown.menu.css";
 
 export function DropdownMenu(props: DropdownMenuProps): JSX.Element | null {

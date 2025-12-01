@@ -1,7 +1,8 @@
 import clsx from "clsx";
-import {JSX, MouseEventHandler} from "react";
+import type {JSX, MouseEventHandler} from "react";
+
 import {useDropdownContext} from "./dropdown.context";
-import {DropdownTriggerProps} from "./dropdown.types";
+import type {DropdownTriggerProps} from "./dropdown.types";
 import "./styles/dropdown.trigger.css";
 
 export function DropdownTrigger(props: DropdownTriggerProps): JSX.Element {

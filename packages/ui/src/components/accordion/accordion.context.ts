@@ -1,5 +1,7 @@
-import {Context, createContext, useContext} from "react";
-import {AccordionContextValue} from "./accordion.types";
+import type {Context} from "react";
+import { createContext, useContext} from "react";
+
+import type {AccordionContextValue} from "./accordion.types";
 
 export const AccordionContext: Context<AccordionContextValue | null> = createContext<AccordionContextValue | null>(null);
 

@@ -1,7 +1,8 @@
 import clsx from "clsx";
-import {ElementType, JSX} from "react";
+import type {ElementType, JSX} from "react";
+
 import {Text} from "../text";
-import {BodyProps, BodySize} from "./body.types";
+import type {BodyProps, BodySize} from "./body.types";
 import "./body.styles.css"
 
 export function Body<T extends ElementType = "p">(props: BodyProps<T>): JSX.Element {

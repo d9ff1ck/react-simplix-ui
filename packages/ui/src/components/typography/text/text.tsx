@@ -1,6 +1,7 @@
 import clsx from "clsx";
-import {ElementType, JSX} from "react";
-import {TextProps} from "./text.types";
+import type {ElementType, JSX} from "react";
+
+import type {TextProps} from "./text.types";
 import "./text.styles.css";
 
 export function Text<T extends ElementType = "p">(props: TextProps<T>): JSX.Element {
