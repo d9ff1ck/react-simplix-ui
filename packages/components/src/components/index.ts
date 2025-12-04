@@ -1,6 +1,0 @@
-export * from "./accordion";
-export * from "./button";
-export * from "./divider";
-export * from "./dropdown";
-export * from "./input";
-export * from "./typography";

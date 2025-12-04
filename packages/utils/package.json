@@ -1,5 +1,5 @@
 {
-    "name": "@simplix/components",
+    "name": "@simplix/utils",
     "version": "0.1.0",
     "description": "A modular, type-safe foundation for Simplix UI. Headless logic, utilities, and shared primitives for building consistent UI components.",
     "license": "MIT",
@@ -35,14 +35,6 @@
         "README.md",
         "LICENSE"
     ],
-    "peerDependencies": {
-        "react": ">=18",
-        "react-dom": ">=18"
-    },
-    "dependencies": {
-        "@simplix/headless": "workspace:*",
-        "@simplix/utils": "workspace:*"
-    },
     "engines": {
         "node": ">=18",
         "pnpm": ">=9"

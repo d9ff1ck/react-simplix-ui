@@ -1,5 +1,5 @@
 {
-    "name": "@simplix/components",
+    "name": "@simplix/hooks",
     "version": "0.1.0",
     "description": "A modular, type-safe foundation for Simplix UI. Headless logic, utilities, and shared primitives for building consistent UI components.",
     "license": "MIT",
@@ -22,11 +22,8 @@
     "exports": {
         ".": {
             "import": "./dist/index.js",
-            "require": "./dist/index.cjs"
-        },
-        "./*": {
-            "import": "./dist/*.js",
-            "require": "./dist/*.cjs"
+            "require": "./dist/index.cjs",
+            "types": "./dist/index.d.ts"
         }
     },
     "sideEffects": false,
@@ -40,7 +37,6 @@
         "react-dom": ">=18"
     },
     "dependencies": {
-        "@simplix/headless": "workspace:*",
         "@simplix/utils": "workspace:*"
     },
     "engines": {
