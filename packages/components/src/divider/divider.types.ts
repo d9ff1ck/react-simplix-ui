@@ -1,0 +1,5 @@
+import type {ComponentWithStyles} from "@simplix/utils";
+import type {HTMLAttributes} from "react";
+
+
+export type DividerProps = ComponentWithStyles & Omit<HTMLAttributes<HTMLHRElement>, keyof ComponentWithStyles>

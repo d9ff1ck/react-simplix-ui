@@ -1,4 +1,4 @@
-import {RefObject} from "react";
+import type {RefObject} from "react";
 
 /**
  * Determines which element receives focus when the trap activates.

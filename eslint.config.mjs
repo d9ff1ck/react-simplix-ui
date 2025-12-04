@@ -11,7 +11,7 @@ const config = [
     },
 
     {
-        files: ["src/**/*.{ts,tsx}"],
+        files: ["**/*.{ts,tsx}"],
 
         languageOptions: {
             parser: tsParser,

@@ -1,8 +1,8 @@
 import {useCallback} from "react";
 
-import type {DropdownState, UseDropdownStateResult} from "./dropdown.types";
+import type {DropdownState, DropdownStateResult} from "./dropdown.types";
 
-export function useDropdownState(props: DropdownState): UseDropdownStateResult {
+export function useDropdownState(props: DropdownState): DropdownStateResult {
     const {
         open: PropertyOpen = true,
         onChangeState,

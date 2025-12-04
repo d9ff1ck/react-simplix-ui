@@ -1,4 +1,5 @@
 import {useEffect} from "react";
+
 import type {ClickOutsideOptions} from "./click-outside.types";
 
 /**

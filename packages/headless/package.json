@@ -40,7 +40,6 @@
         "react-dom": ">=18"
     },
     "dependencies": {
-        "@simplix/hooks": "workspace:*",
         "@simplix/utils": "workspace:*"
     },
     "engines": {

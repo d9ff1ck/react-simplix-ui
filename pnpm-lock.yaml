@@ -96,21 +96,6 @@ importers:
 
   packages/headless:
     dependencies:
-      '@simplix/hooks':
-        specifier: workspace:*
-        version: link:../hooks
-      '@simplix/utils':
-        specifier: workspace:*
-        version: link:../utils
-      react:
-        specifier: '>=18'
-        version: 19.2.0
-      react-dom:
-        specifier: '>=18'
-        version: 19.2.0(react@19.2.0)
-
-  packages/hooks:
-    dependencies:
       '@simplix/utils':
         specifier: workspace:*
         version: link:../utils

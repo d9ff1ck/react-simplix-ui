@@ -1,4 +1,5 @@
 import {useEffect, useRef} from "react";
+
 import type {FocusTrapOptions} from "./focus-trap.types";
 import {getActiveElement, getFocusable} from "./focus-trap.utils";
 
