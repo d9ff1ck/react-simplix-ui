@@ -37,6 +37,13 @@ export type FocusTrapOptions = {
     restore?: boolean;
 };
 
+export type FocusTrapController = {
+    ref: RefObject<HTMLElement | null>;
+    active: boolean;
+    enable(): void;
+    disable(): void;
+};
+
 export type ScopedFocusTrapResult = {
     reference: RefObject<HTMLElement | null>;
 };

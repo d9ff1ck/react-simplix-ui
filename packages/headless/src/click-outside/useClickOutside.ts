@@ -43,5 +43,5 @@ export function useClickOutside(options: ClickOutsideOptions): void {
             document.removeEventListener("mousedown", listener);
             document.removeEventListener("touchstart", listener);
         };
-    }, [handler]);
+    }, [handler]); // eslint-disable-line react-hooks/exhaustive-deps
 }

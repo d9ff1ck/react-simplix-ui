@@ -1,5 +1,6 @@
 import {useDropdownContext} from "@simplix/headless";
 import type {JSX} from "react";
+
 import type {DropdownMenuProps} from "./dropdown.types";
 import "./styles/dropdown.menu.css";
 

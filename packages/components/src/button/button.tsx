@@ -1,4 +1,4 @@
-import {classComposer} from "@simplix/utils";
+import {composeClass} from "@simplix/utils";
 import type {JSX} from "react";
 
 import type {ButtonProps} from "./button.types";
@@ -9,7 +9,7 @@ export function Button(props: ButtonProps): JSX.Element {
 
     return (
         <button
-            className={classComposer({"button": !!className}, className)}
+            className={composeClass({"button": !!className}, className)}
             style={style}
             {...rest}
         >

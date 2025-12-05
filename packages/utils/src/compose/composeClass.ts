@@ -1,7 +1,7 @@
 import type {ClassComposerValue, Composer} from "./compose.types";
 import {createComposer} from "./create-composer";
 
-export const classComposer: Composer<ClassComposerValue, string> = createComposer<ClassComposerValue, string>(
+export const composeClass: Composer<ClassComposerValue, string> = createComposer<ClassComposerValue, string>(
     (...values) => {
         const out = [];
 

@@ -1,5 +1,5 @@
 import {AccordionContext, useAccordionState} from "@simplix/headless";
-import {classComposer} from "@simplix/utils";
+import {composeClass} from "@simplix/utils";
 import type {JSX} from "react";
 
 import type {AccordionRootProps} from "./accordion.types";
@@ -17,7 +17,7 @@ export function AccordionRoot(props: AccordionRootProps): JSX.Element {
     return (
         <AccordionContext.Provider value={value}>
             <div
-                className={classComposer({"accordion": !!className}, className)}
+                className={composeClass({"accordion": !!className}, className)}
                 style={style}
                 {...rest}
             >

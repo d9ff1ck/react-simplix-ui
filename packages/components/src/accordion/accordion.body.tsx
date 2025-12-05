@@ -1,5 +1,5 @@
 import {useAccordionContext} from "@simplix/headless";
-import {classComposer} from "@simplix/utils";
+import {composeClass} from "@simplix/utils";
 import type {ElementType, JSX} from "react";
 
 import type {AccordionBodyProps} from "./accordion.types";
@@ -16,7 +16,7 @@ export function AccordionBody<T extends ElementType>(props: AccordionBodyProps<T
 
     return (
         <Component
-            className={classComposer({"accordion__body": !!className}, className)}
+            className={composeClass({"accordion__body": !!className}, className)}
             style={style}
             {...rest}
         >

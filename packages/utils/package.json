@@ -36,8 +36,8 @@
         "LICENSE"
     ],
     "engines": {
-        "node": ">=18",
-        "pnpm": ">=9"
+        "node": ">=20",
+        "pnpm": ">=10"
     },
     "scripts": {
         "build": "tsup --config ../config/tsup.config.ts",

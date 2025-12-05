@@ -1,6 +1,6 @@
 import {useAccordionContext} from "@simplix/headless";
 import type { ElementOf} from "@simplix/utils";
-import {classComposer} from "@simplix/utils";
+import {composeClass} from "@simplix/utils";
 import type {ElementType, JSX, MouseEventHandler} from "react";
 
 import "./styles/accordion.header.css";
@@ -23,7 +23,7 @@ export function AccordionHeader<T extends ElementType = "div">(props: AccordionH
 
     return (
         <Component
-            className={classComposer({"accordion__header": !!className}, className)}
+            className={composeClass({"accordion__header": !!className}, className)}
             style={style}
             onClick={handleClick}
             {...rest}
