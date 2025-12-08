@@ -1,4 +1,4 @@
 ---
 layout: doc
-title: useClickOutside
+title: onClickController
 ---
