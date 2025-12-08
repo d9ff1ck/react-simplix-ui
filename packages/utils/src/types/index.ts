@@ -3,3 +3,4 @@ export {type ComponentWithStyles} from "./componentWithStyles";
 export {type ElementOf} from "./elementOf";
 export {type PolymorphicComponentWithoutRef} from "./polymorphicComponentWithoutRef";
 export {type PolymorphicComponentWithRef} from "./polymorphicComponentWithRef";
+export {type HeadlessController} from "./headlessController";

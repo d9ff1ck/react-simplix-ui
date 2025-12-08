@@ -1,65 +1,47 @@
-import {useCallback, useEffect, useRef} from "react";
-import {FocusTrapController, FocusTrapOptions} from "./focus-trap.types";
-import {applyInitialFocus, getActiveElement, getFocusable, tabWrapHandler} from "./focus-trap.utils";
+import {createControlModel} from "@simplix/utils";
+import {useCallback, useRef} from "react";
+import {useAutoFocusController} from "./auto-focus.controller";
+import {FocusTrapController, FocusTrapOptions, FocusTrapStatus} from "./focus-trap.types";
+import {useFocusKeyboardController} from "./focus-keyboard.controller";
 
 export function useFocusTrapController(options: FocusTrapOptions = {}): FocusTrapController {
     const reference = useRef<HTMLElement | null>(null);
+    const {status, defaultStatus = "active", initial = "auto", restore = true} = options;
 
-    const status = options.status ?? "active";
-    const initial = options.initial ?? "auto";
-    const restore = options.restore ?? true;
+    const model = createControlModel<FocusTrapStatus>({
+        ...(status !== undefined && {value: status}),
+        defaultValue: defaultStatus
+    });
 
-    const isActive = status === "active";
+    const isActive = model.is("active");
 
-    useEffect(() => {
-        const container = reference.current;
-        if (!isActive || !container) {
-            return;
-        }
+    useAutoFocusController({
+        ref: reference,
+        active: isActive,
+        initial: initial,
+        restore: restore
+    })
 
-        const items = getFocusable(container);
-        if (items.length === 0) {
-            return;
-        }
-
-        const previous = getActiveElement();
-
-        applyInitialFocus(container, initial);
-
-        return () => {
-            if (restore && previous) {
-                previous?.focus();
-            }
-        };
-    }, [isActive]);
-
-    useEffect(() => {
-        const container = reference.current;
-        if (!isActive || !container) {
-            return;
-        }
-
-        const handler = (event: KeyboardEvent) => tabWrapHandler(event, container);
-
-        document.addEventListener("keydown", handler);
-
-        return () => {
-            document.removeEventListener("keydown", handler);
-        };
-    }, [isActive]);
+    useFocusKeyboardController({
+        ref: reference,
+        active: isActive,
+    })
 
     const onEnable = useCallback(() => {
-        console.warn("useFocusTrapController: enable() not implemented yet");
-    }, []);
+        model.set("active");
+    }, [model]);
 
     const onDisable = useCallback(() => {
-        console.warn("useFocusTrapController: disable() not implemented yet");
-    }, []);
+        model.set("disabled");
+    }, [model]);
 
     return {
         ref: reference,
-        active: isActive,
-        enable: onEnable,
-        disable: onDisable,
+        value: model.value,
+        is: model.is,
+        actions: {
+            enable: onEnable,
+            disable: onDisable
+        }
     }
 }
