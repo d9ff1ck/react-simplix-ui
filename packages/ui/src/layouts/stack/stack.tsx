@@ -1,15 +1,11 @@
-import {JSX} from "react";
-import {Box} from "../box";
-import {StackProps} from "./stack.types";
+import type { ElementType, JSX } from "react";
 
-export function Stack(props: StackProps): JSX.Element {
-    const {direction = "vertical", ...rest} = props;
+import { Box } from "../box";
+import type { StackProps } from "./stack.types";
 
-    return (
-        <Box
-            display={"flex"}
-            flexDirection={direction === "vertical" ? "column" : "row"}
-            {...rest}
-        />
-    )
+export function Stack<T extends ElementType = "div">(props: StackProps<T>): JSX.Element {
+    const { as, direction = "vertical", ...rest } = props;
+    const Tag: ElementType = as ?? "div";
+
+    return <Box as={Tag} display={"flex"} flexDirection={direction === "vertical" ? "column" : "row"} {...rest} />;
 }

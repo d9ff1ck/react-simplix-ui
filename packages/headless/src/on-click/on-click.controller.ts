@@ -1,24 +1,20 @@
-import {createControlModel} from "@simplix/utils";
-import {useCallback, useEffect, useRef} from "react";
-import {listener} from "./on-click.utils";
+import { createControlModel } from "@simplix/utils";
+import { useCallback, useEffect, useRef } from "react";
 
-import type {OnClickController, OnClickControllerOptions, OnClickState} from "./on-click.types";
+import type { OnClickController, OnClickControllerOptions, OnClickState } from "./on-click.types";
 
 export function useOnClickController(options: OnClickControllerOptions): OnClickController {
-    const {event = "pointerdown", state, defaultState = "enabled", handler} = options;
+    const { event = "pointerdown", state, defaultState = "enabled", handler } = options;
     const reference = useRef<HTMLElement | null>(null);
 
     const model = createControlModel<OnClickState>({
-        ...(state !== undefined && {value: state}),
-        defaultValue: defaultState
+        ...(state !== undefined && { value: state }),
+        defaultValue: defaultState,
     });
 
     useEffect(() => {
-        (listener as any).currentHandler = handler;
-    }, []);
-
-    useEffect(() => {
-        const listener = (e: PointerEvent) => {
+        const listener = (e: PointerEvent | MouseEvent) => {
+            e.preventDefault();
             handler(e);
         };
 
@@ -27,7 +23,7 @@ export function useOnClickController(options: OnClickControllerOptions): OnClick
         return () => {
             document.removeEventListener(event, listener);
         };
-    }, [handler]); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [handler]);
 
     const onEnable = useCallback(() => model.set("enabled"), []);
     const onDisable = useCallback(() => model.set("disabled"), []);
@@ -38,7 +34,7 @@ export function useOnClickController(options: OnClickControllerOptions): OnClick
         is: model.is,
         actions: {
             enable: onEnable,
-            disable: onDisable
-        }
+            disable: onDisable,
+        },
     };
 }

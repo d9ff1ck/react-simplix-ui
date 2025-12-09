@@ -1,14 +1,12 @@
-import type {ElementType, JSX} from "react";
+import type { ElementType, JSX } from "react";
 
-import {Text} from "../text";
+import { Text } from "../text";
 import "./label.styles.css";
-import type {LabelProps} from "./label.types";
+import type { LabelProps } from "./label.types";
 
-export function Label(props: LabelProps): JSX.Element {
-    const {as, className, ...rest} = props;
+export function Label<T extends ElementType>(props: LabelProps<T>): JSX.Element {
+    const { as, className, ...rest } = props;
     const Tag: ElementType = as ?? "span";
 
-    return (
-        <Text as={Tag} className={className ?? "label"} {...rest} />
-    );
+    return <Text as={Tag} className={className ?? "label"} {...rest} />;
 }

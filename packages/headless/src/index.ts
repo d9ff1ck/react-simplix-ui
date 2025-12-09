@@ -1,5 +1,5 @@
 export * from "./accordion";
-export * from "./click-outside";
+export * from "./on-click";
 export * from "./dropdown";
 export * from "./focus-trap";
 export * from "./key-down";

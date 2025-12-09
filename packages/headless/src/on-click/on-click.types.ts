@@ -1,16 +1,10 @@
-import {HeadlessController} from "@simplix/utils";
+import type { HeadlessController } from "@simplix/utils";
 
-export type OnClickHandler = (event: PointerEvent) => void;
+export type OnClickHandler = (event: PointerEvent | MouseEvent) => void;
 
-export type OnClickState =
-    | "enabled"
-    | "disabled";
+export type OnClickState = "enabled" | "disabled";
 
-export type OnClickEvent =
-    | "pointerdown"
-    | "pointerup"
-    | "pointercancel"
-    | "click";
+export type OnClickEvent = "pointerdown" | "pointerup" | "pointercancel" | "click";
 
 export type OnClickControllerOptions = {
     event?: OnClickEvent;
@@ -24,4 +18,4 @@ export type OnClickActions = {
     disable(): void;
 };
 
-export type OnClickController = HeadlessController<OnClickState, OnClickActions>
+export type OnClickController = HeadlessController<OnClickState, OnClickActions>;

@@ -1,8 +1,13 @@
-import {ElementType} from "react";
-import {BoxProps} from "../box";
+import { PolymorphicComponentWithRef } from "@simplix/utils";
+import type { ElementType } from "react";
+
+import type { BoxProps } from "../box";
 
 export type StackDirection = "vertical" | "horizontal";
 
-export type StackProps<T extends ElementType = "div"> = Omit<BoxProps<T>, "display" | "flexDirection"> & {
-    direction?: StackDirection;
-};
+export type StackProps<T extends ElementType = "div"> = PolymorphicComponentWithRef<
+    T,
+    Omit<BoxProps<T>, "display" | "flexDirection"> & {
+        direction?: StackDirection;
+    }
+>;
