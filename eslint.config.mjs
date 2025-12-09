@@ -1,30 +1,34 @@
-import * as js from "@eslint/js";
-import * as prettierConfig from "eslint-config-prettier";
-import * as importPlugin from "eslint-plugin-import";
-import * as prettierPlugin from "eslint-plugin-prettier";
-import * as react from "eslint-plugin-react";
-import { defineConfig } from "eslint/config";
-import * as globals from "globals";
-import * as tseslint from "typescript-eslint";
+// @ts-nocheck
+import js from "@eslint/js";
+import prettierConfig from "eslint-config-prettier";
+import importPlugin from "eslint-plugin-import";
+import prettierPlugin from "eslint-plugin-prettier";
+import react from "eslint-plugin-react";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
-export default defineConfig([
+export default [
     {
         ignores: ["dist", "node_modules", "*.d.ts", "coverage"],
     },
 
     {
         files: ["**/*.{js,mjs,cjs}"],
+        languageOptions: {
+            globals: globals.browser,
+        },
         plugins: {
             js,
             prettier: prettierPlugin,
         },
         extends: [js.configs.recommended, prettierConfig],
-        languageOptions: {
-            globals: globals.browser,
-        },
     },
 
-    react.configs.flat.recommended,
+    {
+        files: ["**/*.{jsx,tsx}"],
+        extends: [react.configs.flat.recommended],
+    },
+
     {
         files: ["**/*.{ts,tsx}"],
         languageOptions: {
@@ -43,6 +47,7 @@ export default defineConfig([
         extends: [...tseslint.configs.recommended, prettierConfig],
         rules: {
             ...prettierPlugin.rules,
+
             "@typescript-eslint/no-explicit-any": "error",
             "@typescript-eslint/consistent-type-imports": "warn",
             "@typescript-eslint/no-unused-vars": [
@@ -65,8 +70,9 @@ export default defineConfig([
                     "newlines-between": "always",
                 },
             ],
+
             "react/react-in-jsx-scope": "off",
             "react/jsx-uses-react": "off",
         },
     },
-]);
+];

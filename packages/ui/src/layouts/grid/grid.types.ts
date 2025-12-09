@@ -1,9 +1,10 @@
 import { PolymorphicComponentWithRef } from "@simplix/utils";
 import { CSSProperties, ElementType } from "react";
+import { LayoutProps } from "../layout";
 
 export type GridRootProps<T extends ElementType> = PolymorphicComponentWithRef<
     T,
-    {
+    LayoutProps<T> & {
         inline?: boolean;
         columns?: CSSProperties["gridTemplateColumns"];
         rows?: CSSProperties["gridTemplateRows"];
@@ -27,7 +28,7 @@ export type GridRootProps<T extends ElementType> = PolymorphicComponentWithRef<
 
 export type GridColumnProps<T extends ElementType> = PolymorphicComponentWithRef<
     T,
-    {
+    LayoutProps<T> & {
         column?: CSSProperties["gridColumn"];
         row?: CSSProperties["gridRow"];
         area?: CSSProperties["gridArea"];

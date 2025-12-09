@@ -1,8 +1,9 @@
 import { CSSProperties, ElementType, JSX } from "react";
+import { Layout } from "../layout";
 import { GridRootProps } from "./grid.types";
 
 export function GridRoot<T extends ElementType = "div">(props: GridRootProps<T>): JSX.Element {
-    const { as, children, className, style, ...rest } = props;
+    const { as, style, ...rest } = props;
     const {
         inline,
         columns,
@@ -22,35 +23,33 @@ export function GridRoot<T extends ElementType = "div">(props: GridRootProps<T>)
         autoColumns,
         autoRows,
         autoFlow,
+
         ...others
     } = rest;
-    const Component: ElementType = as ?? "div";
+    const Tag: ElementType = as ?? "div";
 
-    const inlineStyles = {
+    const inlineStyles: CSSProperties = {
         display: inline ? "inline-grid" : "grid",
         ...(columns !== undefined && { gridTemplateColumns: columns }),
         ...(rows !== undefined && { gridTemplateRows: rows }),
         ...(areas !== undefined && { gridTemplateAreas: areas }),
 
-        ...(gap !== undefined && { gap }),
-        ...(columnGap !== undefined && { columnGap }),
-        ...(rowGap !== undefined && { rowGap }),
+        ...(gap !== undefined && { gap: gap }),
+        ...(columnGap !== undefined && { columnGap: columnGap }),
+        ...(rowGap !== undefined && { rowGap: rowGap }),
 
-        ...(alignContent !== undefined && { alignContent }),
-        ...(justifyContent !== undefined && { justifyContent }),
+        ...(alignContent !== undefined && { alignContent: alignContent }),
+        ...(justifyContent !== undefined && { justifyContent: justifyContent }),
 
-        ...(alignItems !== undefined && { alignItems }),
-        ...(justifyItems !== undefined && { justifyItems }),
+        ...(alignItems !== undefined && { alignItems: alignItems }),
+        ...(justifyItems !== undefined && { justifyItems: justifyItems }),
 
         ...(autoColumns !== undefined && { gridAutoColumns: autoColumns }),
         ...(autoRows !== undefined && { gridAutoRows: autoRows }),
         ...(autoFlow !== undefined && { gridAutoFlow: autoFlow }),
-        ...style,
-    } as CSSProperties;
 
-    return (
-        <Component className={className} style={inlineStyles} {...others}>
-            {children}
-        </Component>
-    );
+        ...style,
+    };
+
+    return <Layout as={Tag} style={inlineStyles} {...others} />;
 }
