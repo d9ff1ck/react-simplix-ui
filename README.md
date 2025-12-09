@@ -89,15 +89,15 @@ export function App(): JSX.Element {
 				Toggle Menu
 				</Dropdown.Trigger>
 				<Dropdown.Menu>
-					<Dropdown.GridItem>
+					<Dropdown.Item>
 						Profile
-					</Dropdown.GridItem>
-					<Dropdown.GridItem>
+					</Dropdown.Item>
+					<Dropdown.Item>
 						Settings
-					</Dropdown.GridItem>
-					<Dropdown.GridItem>
+					</Dropdown.Item>
+					<Dropdown.Item>
 						Logout
-					</Dropdown.GridItem>
+					</Dropdown.Item>
 				</Dropdown.Menu>
 			</Dropdown>
 		</>
