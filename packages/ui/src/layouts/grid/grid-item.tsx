@@ -1,8 +1,8 @@
 import type { CSSProperties, ElementType, JSX } from "react";
 import { Layout } from "../layout";
-import type { GridColumnProps } from "./grid.types";
+import type { GridItemProps } from "./grid.types";
 
-export function GridColumn<T extends ElementType = "div">(props: GridColumnProps<T>): JSX.Element {
+export function GridItem<T extends ElementType = "div">(props: GridItemProps<T>): JSX.Element {
     const { as, style, ...rest } = props;
     const { column, row, area, colSpan, colStart, colEnd, rowSpan, rowStart, rowEnd, ...others } = rest;
     const Tag: ElementType = as ?? "div";

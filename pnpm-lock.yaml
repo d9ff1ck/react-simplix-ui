@@ -68,6 +68,9 @@ importers:
 
   apps/playground:
     dependencies:
+      '@simplix/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       react:
         specifier: ^19.2.0
         version: 19.2.0

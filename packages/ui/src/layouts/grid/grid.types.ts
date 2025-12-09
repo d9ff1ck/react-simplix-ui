@@ -26,7 +26,7 @@ export type GridRootProps<T extends ElementType> = PolymorphicComponentWithRef<
     }
 >;
 
-export type GridColumnProps<T extends ElementType> = PolymorphicComponentWithRef<
+export type GridItemProps<T extends ElementType> = PolymorphicComponentWithRef<
     T,
     LayoutProps<T> & {
         column?: CSSProperties["gridColumn"];

@@ -1,6 +1,6 @@
-import { GridColumn } from "./grid-column";
+import { GridItem } from "./grid-item";
 import { GridRoot } from "./grid-root";
 
 export const Grid = Object.assign(GridRoot, {
-    Column: GridColumn,
+    Item: GridItem,
 });
