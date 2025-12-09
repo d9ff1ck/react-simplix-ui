@@ -13,7 +13,7 @@ export function GridColumn<T extends ElementType = "div">(props: GridColumnProps
         ...(colStart !== undefined && { gridColumnStart: colStart }),
         ...(colEnd !== undefined && { gridColumnEnd: colEnd }),
 
-        ...(row !== undefined && { row }),
+        ...(row !== undefined && { gridRow: row }),
         ...(rowSpan !== undefined && { gridRow: `span ${rowSpan}` }),
         ...(rowStart !== undefined && { gridRowStart: rowStart }),
         ...(rowEnd !== undefined && { gridRowEnd: rowEnd }),
