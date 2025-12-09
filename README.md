@@ -3,15 +3,15 @@
 	<picture>
 		<source
 			 media="(prefers-color-scheme: dark)" 
-			 srcset="./apps/docs/assets/static/rslxui-icon-dark.svg"
+			 srcset="./apps/docs/assets/rslxui-icon-dark.svg"
 			 >
 		<source 
 			media="(prefers-color-scheme: light)" 
-			srcset="./apps/docs/assets/static/rslxui-icon-light.svg"
+			srcset="./apps/docs/assets/rslxui-icon-light.svg"
 			>
 		<img 
 			alt="RSLXUI-Logo"
-			src="./apps/docs/assets/static/rslxui-icon-dark.svg" height="72"
+			src="./apps/docs/assets/rslxui-icon-dark.svg" height="72"
 			/>
 	</picture>
 </div>
@@ -26,89 +26,85 @@
 ---
 
 ## Why react-simplix-ui?
-
 UI libraries are often heavy, opinionated, or overly abstract.  
 react-simplix-ui focuses on predictable composition, strict typing, and full developer control — without forcing styling
 systems or hidden behavior.
 
 ## Features
 
-- **Composable Architecture**  
-	Build interfaces from small, predictable units — everything is designed to be combined, overridden, and extended.
-- **Strict Type Safety**  
-	Fully typed from top to bottom. No hidden `any`, no unclear behavior — your editor always knows what’s going on.
-- **Built-In Accessibility (a11y)**  
-	Components follow accessible interaction patterns by default:
-	- Keyboard navigation
-	- Focus management
-	- ARIA roles and state syncing
-	- Predictable state machines
-- **Unopinionated Styling**  
-	Use any styling approach you prefer: CSS, SCSS, Tailwind, SASS, CSS-in-JS, or anything else. No imposed design system.
-- **Minimal & Dependency-Free**  
-	No runtime dependencies and no heavy abstractions. A clean, lightweight core that stays out of your way.
-- **Tree-Shakeable by Design**  
-	Import only the pieces you actually use — nothing extra ends up in your bundle.
+- **Composable Architecture**
+- **Strict Type Safety**
+- **Built-In Accessibility (a11y)**
+- **Unopinionated Styling**
+- **Minimal & Dependency-Free**
+- **Tree-Shakeable by Design**
+
+## Overview
+
+- **@simplix/ui**
+  A complete set of React components built on top of the headless controllers and theme tokens — everything rendered,
+  styled minimally, and ready to use, while staying fully composable and override-friendly.
+- **@simplix/theme**
+  A unified design-token system containing colors, roles, typography scales, spacing, and elevations — the single source
+  of visual consistency used by both UI components and custom user components.
+- **@simplix/headless**
+  Interaction and state logic extracted into framework-agnostic controllers and hooks; this layer defines how components
+  behave (focus, click, toggles, patterns) without dictating how they look.
+- **@simplix/utils**
+  Low-level engine pieces (class composer, control models, shared types, helpers) that implement core Simplix patterns
+  and power the other packages, but can also be used standalone.
 
 ## Quick Start
 
-### Requirements
-
-- **React**: `18` or higher
-
 ### Installation
-
 #### PNPM (Recommended)
-
 ```bash
-pnpm add react-simplix-ui
+pnpm add @simplix/<name>
 ```
 
-#### NPM
-
+#### NPM | YARN | BUN
 ```bash
-npm install react-simplix-ui
-```
-
-#### YARN
-
-```bash
-yarn add react-simplix-ui
+# In the same way
 ```
 
 ### Usage
-
 ```tsx
-import {Dropdown} from "@simplix/ui";
+import {Flex} from "@simplix/ui";
+import {Dropdown} from "@simplix/ui/dropdown";
 
-export function App(): JSX.Element {
+export function Example() {
     return (
-        <>
-			<Dropdown open={state} onChangeState={setState}>
-				<Dropdown.Trigger>
-				Toggle Menu
-				</Dropdown.Trigger>
-				<Dropdown.Menu>
-					<Dropdown.Item>
-						Profile
-					</Dropdown.Item>
-					<Dropdown.Item>
-						Settings
-					</Dropdown.Item>
-					<Dropdown.Item>
-						Logout
-					</Dropdown.Item>
-				</Dropdown.Menu>
-			</Dropdown>
-		</>
+        <Flex as="div" align="center" justify="start">
+            <Dropdown>
+                {/* 
+                    Trigger is a regular component.
+                    You can replace it with your own button, icon, or any other element.
+                */}
+                <Dropdown.Trigger>
+                    Open
+                </Dropdown.Trigger>
+
+                {/* 
+                    Menu is fully composable — style it, animate it,
+                    or replace the internal layout using className/style props.
+                */}
+                <Dropdown.Menu>
+                    {/* 
+                        Items are just building blocks.
+                        Add icons, shortcuts, custom renderers — nothing is locked. 
+                    */}
+                    <Dropdown.Item>Profile</Dropdown.Item>
+                    <Dropdown.Item>Settings</Dropdown.Item>
+                    <Dropdown.Item disabled>Disabled Action</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+        </Flex>
     );
 }
 ```
 
 ## Contributing
-
 Contribution guidelines are available in **[CONTRIBUTING.md](./CONTRIBUTING.md)**
 
 ## License
-
 [MIT License](./packages/ui/LICENSE)
