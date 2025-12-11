@@ -13,6 +13,8 @@ export function Flex<T extends ElementType = "div">(props: FlexProps<T>): JSX.El
         ...(alignItems !== undefined && { alignItems: alignItems }),
         ...(justifyContent !== undefined && { justifyContent: justifyContent }),
         ...(wrap !== undefined && { flexWrap: wrap }),
+
+        ...style,
     };
 
     return <Layout as={Tag} style={inlineStyles} {...others} />;

@@ -44,7 +44,7 @@
         "pnpm": ">=10"
     },
     "scripts": {
-        "build": "tsup --config ../config/tsup.config.ts",
+        "build": "tsup --config ../.config/tsup.config.ts",
         "clean": "rm -rf dist"
     },
     "keywords": [
